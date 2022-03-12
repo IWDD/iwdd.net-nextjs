@@ -8,5 +8,17 @@
 ## 開発サーバーの起動
 
 ```bash
-npm run dev
+yarn dev
+```
+
+## Lint
+
+```bash
+yarn lint
+```
+
+## Build
+
+```bash
+yarn build
 ```
