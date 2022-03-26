@@ -1,15 +1,9 @@
-import Head from 'next/head'
 import Image from 'next/image'
+import Layout from '../components/layout'
 
-export default function Home() {
+export default function Index() {
   return (
-    <div>
-      <Head>
-        <title>IWDD</title>
-        <meta name="description" content="iwdd" />
-      </Head>
-
-      <main>
+      <>
         <h1>
           <Image src="/iwdd_logo.svg" alt="IWDD Logo" width={912} height={214} />
         </h1>
@@ -48,7 +42,14 @@ export default function Home() {
             <a href="https://iwdd.connpass.com/event/198964/" target="_blank" rel="noreferrer">https://iwdd.connpass.com/event/198964/</a>
           </dd>
         </dl>
-      </main>
-    </div>
+      </>
+  )
+}
+
+Index.getLayout = function getLayout(page) {
+  return (
+    <Layout>
+      {page}
+    </Layout>
   )
 }
