@@ -1,6 +1,13 @@
 import '@/app/globals.css'
 
+import { Shippori_Mincho } from 'next/font/google'
 import React from 'react'
+
+const shipporiMincho = Shippori_Mincho({
+  display: 'swap',
+  subsets: ['latin'],
+  weight: ['400', '700'],
+})
 
 export const metadata = {
   title: 'IWDDはWebデザインとWeb開発のローカルコミュニティー',
@@ -14,7 +21,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="ja">
+    <html lang="ja" className={shipporiMincho.className}>
       <body>
         <main>{children}</main>
       </body>
