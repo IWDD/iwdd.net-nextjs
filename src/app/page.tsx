@@ -4,7 +4,12 @@ export default function Home() {
   return (
     <>
       <h1>
-        <Image src="/iwdd_logo.svg" alt="IWDD Logo" width={384} height={90} />
+        <Image
+          src={'/iwdd_logo.svg'}
+          alt={'IWDD Logo'}
+          width={384}
+          height={90}
+        />
       </h1>
       <h2 className="text-2xl font-bold underline">
         IWDD (vol.183) / オンライン開催 14:00〜
