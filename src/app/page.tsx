@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 
 export default function Home() {
   return (
@@ -25,13 +26,9 @@ export default function Home() {
         <dd>募集中</dd>
         <dt>参加申し込み</dt>
         <dd>
-          <a
-            href="https://iwdd.connpass.com/event/198964/"
-            target="_blank"
-            rel="noreferrer"
-          >
+          <Link href={'https://iwdd.connpass.com/event/198964/'}>
             https://iwdd.connpass.com/event/198964/
-          </a>
+          </Link>
         </dd>
       </dl>
     </>
