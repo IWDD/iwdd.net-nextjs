@@ -6,6 +6,7 @@ import React from 'react'
 const shipporiMincho = Shippori_Mincho({
   display: 'swap',
   subsets: ['latin'],
+  variable: '--font-shipporiMincho',
   weight: ['400', '700'],
 })
 
@@ -21,8 +22,8 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="ja" className={shipporiMincho.className}>
-      <body>
+    <html lang="ja" className={`${shipporiMincho.variable}`}>
+      <body className={'font-shipporiMincho'}>
         <main>{children}</main>
       </body>
     </html>
