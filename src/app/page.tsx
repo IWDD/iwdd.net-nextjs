@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 export default function Home() {
   return (
-    <>
+    <main>
       <h1>
         <Image
           src={'/iwdd_logo.svg'}
@@ -31,6 +31,6 @@ export default function Home() {
           </Link>
         </dd>
       </dl>
-    </>
+    </main>
   )
 }

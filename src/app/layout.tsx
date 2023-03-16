@@ -24,7 +24,7 @@ export default function RootLayout({
   return (
     <html lang="ja" className={`${shipporiMincho.variable}`}>
       <body className={'font-shipporiMincho'}>
-        <main>{children}</main>
+        {children}
       </body>
     </html>
   )
