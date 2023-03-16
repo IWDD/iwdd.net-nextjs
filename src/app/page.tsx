@@ -6,10 +6,10 @@ export default function Home() {
     <main>
       <h1>
         <Image
-          src={'/iwdd_logo.svg'}
-          alt={'IWDD Logo'}
-          width={384}
-          height={90}
+          src="/iwdd_logo.svg"
+          alt="IWDD Logo"
+          width="384"
+          height="90"
         />
       </h1>
       <h2 className="text-2xl font-bold underline">
@@ -26,7 +26,7 @@ export default function Home() {
         <dd>募集中</dd>
         <dt>参加申し込み</dt>
         <dd>
-          <Link href={'https://iwdd.connpass.com/event/198964/'}>
+          <Link href="https://iwdd.connpass.com/event/198964/">
             https://iwdd.connpass.com/event/198964/
           </Link>
         </dd>
