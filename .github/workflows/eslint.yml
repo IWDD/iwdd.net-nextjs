@@ -1,0 +1,28 @@
+name: eslint
+
+on:
+  - pull_request
+
+jobs:
+  eslint:
+    runs-on: ${{ matrix.runner }}
+    timeout-minutes: 10
+    strategy:
+      matrix:
+        runner: [ubuntu-latest]
+        node: [18]
+    name: eslint with reviewdog on node ${{ matrix.node }} ${{ matrix.runner }}
+    steps:
+      - uses: actions/checkout@v3
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node }}
+      - name: npm ci
+        run: npm ci
+      - uses: reviewdog/action-eslint@v1
+        with:
+          eslint_flags: 'src/**/*.{js,jsx,ts,tsx}'
+          fail_on_error: true
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          reporter: github-check

@@ -2,7 +2,14 @@
 module.exports = {
   content: ['./src/**/*.{js,ts,jsx,tsx}', '!./node_modules'],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        iwdd: '#c70d02',
+      },
+      fontFamily: {
+        shipporiMincho: ['var(--font-shipporiMincho)'],
+      },
+    },
   },
   plugins: [],
 }
