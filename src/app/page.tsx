@@ -14,8 +14,8 @@ export default function Home() {
     url: 'https://iwdd.connpass.com/event/198964/',
   }
   return (
-    <main>
-      <h1>
+    <main className="container mx-auto px-4 text-center text-sm subpixel-antialiased md:px-20 lg:px-40">
+      <h1 className="mx-auto w-1/2 py-12 opacity-80 md:w-1/3">
         <Image
           src="/iwdd_logo.svg"
           alt="IWDD Logo"
@@ -24,22 +24,22 @@ export default function Home() {
           className="opacity-80"
         />
       </h1>
-      <h2 className="text-iwdd">{data.title}</h2>
-      <dl className="text-sm">
-        <dt className="text-iwdd">会場</dt>
+      <h2 className="border-t py-10 text-iwdd">{data.title}</h2>
+      <dl>
+        <dt className="pt-4 text-iwdd">会場</dt>
         <dd>{data.room}</dd>
-        <dt className="text-iwdd">開催日</dt>
+        <dt className="pt-4 text-iwdd">開催日</dt>
         <dd>{data.date}</dd>
-        <dt className="text-iwdd">参加費</dt>
+        <dt className="pt-4 text-iwdd">参加費</dt>
         <dd>
-          <dl>
-            <dt>社会人</dt>
-            <dd>{data.price.adult}</dd>
-            <dt>学生</dt>
-            <dd>{data.price.student}</dd>
+          <dl className="grid grid-cols-2 grid-rows-1 gap-x-2">
+            <dt className="place-self-end">社会人</dt>
+            <dd className="place-self-start">{data.price.adult}</dd>
+            <dt className="place-self-end">学生</dt>
+            <dd className="place-self-start">{data.price.student}</dd>
           </dl>
         </dd>
-        <dt className="text-iwdd">今月のお題</dt>
+        <dt className="pt-4 text-iwdd">今月のお題</dt>
         <dd>
           <ul>
             {data.themes.map((d, i) => {
@@ -47,9 +47,11 @@ export default function Home() {
             })}
           </ul>
         </dd>
-        <dt>参加申し込み</dt>
+        <dt className="pt-4 text-iwdd">参加申し込み</dt>
         <dd>
-          <Link href={data.url}>{data.url}</Link>
+          <Link href={data.url} className="underline hover:no-underline">
+            {data.url}
+          </Link>
         </dd>
       </dl>
     </main>
