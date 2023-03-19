@@ -24,7 +24,7 @@ export default function Home() {
           className="opacity-80"
         />
       </h1>
-      <h2 className="text-xl text-iwdd">{data.title}</h2>
+      <h2 className="text-iwdd">{data.title}</h2>
       <dl className="text-sm">
         <dt className="text-iwdd">会場</dt>
         <dd>{data.room}</dd>
