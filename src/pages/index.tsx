@@ -1,4 +1,6 @@
 import dayjs from 'dayjs'
+import timezone from 'dayjs/plugin/timezone'
+import utc from 'dayjs/plugin/utc'
 import { NextPage } from 'next'
 import Head from 'next/head'
 import Link from 'next/link'
@@ -6,6 +8,10 @@ import { parse } from 'node-html-parser'
 
 import type { ConnpassEvent, ConnpassEvents } from '@/types/connpass'
 import type { HomeProps } from '@/types/home'
+
+dayjs.extend(utc)
+dayjs.extend(timezone)
+dayjs.tz.setDefault('Asia/Tokyo')
 
 const Home: NextPage<HomeProps> = ({ event }) => {
   return (
@@ -66,7 +72,8 @@ const Home: NextPage<HomeProps> = ({ event }) => {
 }
 
 export const getStaticProps = async (): Promise<{ props: HomeProps }> => {
-  const now = dayjs()
+  const now = dayjs().tz('Asia/Tokyo')
+  console.log(now)
   let yyyymm
   if (now.date() > 14) {
     yyyymm = now.add(1, 'month').format('YYYYMM')
@@ -82,8 +89,10 @@ export const getStaticProps = async (): Promise<{ props: HomeProps }> => {
 
   const title = event.title
   const place = event.place
-  const started_at = dayjs(event.started_at).format('YYYY.MM.DD HH:mm')
-  const ended_at = dayjs(event.ended_at).format('HH:mm')
+  const started_at = dayjs(event.started_at)
+    .tz('Asia/Tokyo')
+    .format('YYYY.MM.DD HH:mm')
+  const ended_at = dayjs(event.ended_at).tz('Asia/Tokyo').format('HH:mm')
   const date = `${started_at} - ${ended_at}`
 
   const doc = parse(event.description)
