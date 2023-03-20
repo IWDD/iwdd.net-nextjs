@@ -71,9 +71,10 @@ const Home: NextPage<HomeProps> = ({ event }) => {
   )
 }
 
-export const getStaticProps = async (): Promise<{ props: HomeProps }> => {
+export const getStaticProps = async (): Promise<
+  { props: HomeProps } | undefined
+> => {
   const now = dayjs().tz('Asia/Tokyo')
-  console.log(now)
   let yyyymm
   if (now.date() > 14) {
     yyyymm = now.add(1, 'month').format('YYYYMM')
@@ -81,39 +82,51 @@ export const getStaticProps = async (): Promise<{ props: HomeProps }> => {
     yyyymm = now.format('YYYYMM')
   }
 
-  const d = await fetch(
-    `https://connpass.com/api/v1/event/?series_id=2772&count=10&order=2&ym=${yyyymm}`
-  )
-  const connpassEvents: ConnpassEvents = await d.json()
-  const event: ConnpassEvent = connpassEvents.events[0]
+  try {
+    const response = await fetch(
+      `https://connpass.com/api/v1/event/?series_id=2772&count=10&order=2&ym=${yyyymm}`
+    )
+    const connpassEvents: ConnpassEvents = await response.json()
+    const event: ConnpassEvent = connpassEvents.events[0]
 
-  const title = event.title
-  const place = event.place
-  const started_at = dayjs(event.started_at)
-    .tz('Asia/Tokyo')
-    .format('YYYY.MM.DD HH:mm')
-  const ended_at = dayjs(event.ended_at).tz('Asia/Tokyo').format('HH:mm')
-  const date = `${started_at} - ${ended_at}`
+    if (
+      event.title === undefined ||
+      event.title === null ||
+      event.title === ''
+    ) {
+      throw new Error('title is undefined')
+    }
 
-  const doc = parse(event.description)
-  const li = doc.querySelector('ul > li')
-  const themes = li ? li?.text.split('\n') : []
-  const event_url = event.event_url
+    const title = event.title
+    const place = event.place
+    const started_at = dayjs(event.started_at)
+      .tz('Asia/Tokyo')
+      .format('YYYY.MM.DD HH:mm')
+    const ended_at = dayjs(event.ended_at).tz('Asia/Tokyo').format('HH:mm')
+    const date = `${started_at} - ${ended_at}`
 
-  return {
-    props: {
-      event: {
-        title,
-        place,
-        date,
-        price: {
-          adult: '500円',
-          student: '無料',
+    const doc = parse(event.description)
+    const li = doc.querySelector('ul > li')
+    const themes = li ? li?.text.split('\n') : []
+    const event_url = event.event_url
+
+    return {
+      props: {
+        event: {
+          title,
+          place,
+          date,
+          price: {
+            adult: '500円',
+            student: '無料',
+          },
+          themes,
+          event_url,
         },
-        themes,
-        event_url,
       },
-    },
+    }
+  } catch (error) {
+    console.error(error)
   }
 }
 
