@@ -1,15 +1,21 @@
 {
   "name": "iwdd.net-nextjs",
   "version": "0.1.0",
+  "engines": {
+    "node": "18"
+  },
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "export": "next export",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
+    "dayjs": "1.11.7",
     "next": "13.2.4",
+    "node-html-parser": "6.1.5",
     "react": "18.2.0",
     "react-dom": "18.2.0"
   },
