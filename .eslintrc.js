@@ -17,5 +17,6 @@ module.exports = {
         patterns: ['./', '../'],
       },
     ],
+    '@next/next/no-img-element': 'off',
   },
 }

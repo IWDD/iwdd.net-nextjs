@@ -1,18 +1,13 @@
+import dayjs from 'dayjs'
+import { NextPage } from 'next'
 import Head from 'next/head'
 import Link from 'next/link'
+import { parse } from 'node-html-parser'
 
-export default function Home() {
-  const data = {
-    title: 'IWDD (vol.183) / オンライン開催 14:00〜',
-    room: 'オンライン開催 ()',
-    date: '2022.03.12 14:00 - 17:00',
-    price: {
-      adult: '500円',
-      student: '無料',
-    },
-    themes: ['募集中'],
-    url: 'https://iwdd.connpass.com/event/198964/',
-  }
+import type { ConnpassEvent, ConnpassEvents } from '@/types/connpass'
+import type { HomeProps } from '@/types/home'
+
+const Home: NextPage<HomeProps> = ({ event }) => {
   return (
     <>
       <Head>
@@ -32,33 +27,36 @@ export default function Home() {
             className="opacity-80"
           />
         </h1>
-        <h2 className="border-t py-10 text-iwdd">{data.title}</h2>
+        <h2 className="border-t py-10 text-iwdd">{event.title}</h2>
         <dl>
           <dt className="pt-4 text-iwdd">会場</dt>
-          <dd>{data.room}</dd>
+          <dd>{event.place}</dd>
           <dt className="pt-4 text-iwdd">開催日</dt>
-          <dd>{data.date}</dd>
+          <dd>{event.date}</dd>
           <dt className="pt-4 text-iwdd">参加費</dt>
           <dd>
             <dl className="grid grid-cols-2 grid-rows-1 gap-x-2">
               <dt className="place-self-end">社会人</dt>
-              <dd className="place-self-start">{data.price.adult}</dd>
+              <dd className="place-self-start">{event.price.adult}</dd>
               <dt className="place-self-end">学生</dt>
-              <dd className="place-self-start">{data.price.student}</dd>
+              <dd className="place-self-start">{event.price.student}</dd>
             </dl>
           </dd>
           <dt className="pt-4 text-iwdd">今月のお題</dt>
           <dd>
             <ul>
-              {data.themes.map((d, i) => {
+              {event.themes.map((d, i) => {
                 return <li key={i}>{d}</li>
               })}
             </ul>
           </dd>
           <dt className="pt-4 text-iwdd">参加申し込み</dt>
           <dd>
-            <Link href={data.url} className="underline hover:no-underline">
-              {data.url}
+            <Link
+              href={event.event_url}
+              className="underline hover:no-underline"
+            >
+              {event.event_url}
             </Link>
           </dd>
         </dl>
@@ -66,3 +64,48 @@ export default function Home() {
     </>
   )
 }
+
+export const getStaticProps = async (): Promise<{ props: HomeProps }> => {
+  const now = dayjs()
+  let yyyymm
+  if (now.date() > 14) {
+    yyyymm = now.add(1, 'month').format('YYYYMM')
+  } else {
+    yyyymm = now.format('YYYYMM')
+  }
+
+  const d = await fetch(
+    `https://connpass.com/api/v1/event/?series_id=2772&count=10&order=2&ym=${yyyymm}`
+  )
+  const connpassEvents: ConnpassEvents = await d.json()
+  const event: ConnpassEvent = connpassEvents.events[0]
+
+  const title = event.title
+  const place = event.place
+  const started_at = dayjs(event.started_at).format('YYYY.MM.DD HH:mm')
+  const ended_at = dayjs(event.ended_at).format('HH:mm')
+  const date = `${started_at} - ${ended_at}`
+
+  const doc = parse(event.description)
+  const li = doc.querySelector('ul > li')
+  const themes = li ? li?.text.split('\n') : []
+  const event_url = event.event_url
+
+  return {
+    props: {
+      event: {
+        title,
+        place,
+        date,
+        price: {
+          adult: '500円',
+          student: '無料',
+        },
+        themes,
+        event_url,
+      },
+    },
+  }
+}
+
+export default Home
