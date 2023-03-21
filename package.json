@@ -8,6 +8,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "postbuild": "next-sitemap",
     "export": "next export",
     "start": "next start",
     "lint": "next lint"
@@ -15,6 +16,7 @@
   "dependencies": {
     "dayjs": "1.11.7",
     "next": "13.2.4",
+    "next-sitemap": "4.0.6",
     "node-html-parser": "6.1.5",
     "react": "18.2.0",
     "react-dom": "18.2.0"
