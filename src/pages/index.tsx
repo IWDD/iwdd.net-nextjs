@@ -35,7 +35,7 @@ const Home: NextPage<HomeProps> = ({ event }) => {
         </h1>
         <h2 className="border-t py-10 text-iwdd">{event.title}</h2>
         <dl>
-          <dt className="pt-4 text-iwdd">会場</dt>
+          <dt className="pt-4 text-iwdd">あああああああaaaaaa会場</dt>
           <dd>{event.place}</dd>
           <dt className="pt-4 text-iwdd">開催日</dt>
           <dd>{event.date}</dd>
