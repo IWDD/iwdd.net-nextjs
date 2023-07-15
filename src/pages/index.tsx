@@ -145,7 +145,7 @@ const getNextConnpassEvent = async (): Promise<ConnpassEvent> => {
       yyyymm = now.format('YYYYMM')
     }
     const response = await fetch(
-      `https://connpass.com/api/v1/event/?series_id=2772&count=10&order=2&ym=${yyyymm}`
+      `https://connpass.com/api/v1/event/?series_id=2772&count=10&order=2&ym=${yyyymm}`,
     )
     const connpassEvents: ConnpassEvents = await response.json()
     const events: ConnpassEvent[] = connpassEvents.events
