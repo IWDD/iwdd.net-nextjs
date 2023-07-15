@@ -74,60 +74,88 @@ const Home: NextPage<HomeProps> = ({ event }) => {
 export const getStaticProps = async (): Promise<
   { props: HomeProps } | undefined
 > => {
+  const event = await getNextConnpassEvent()
+  const title = event.title
+  const place = event.place
+  const started_at = dayjs(event.started_at)
+    .tz('Asia/Tokyo')
+    .format('YYYY.MM.DD HH:mm')
+  const ended_at = dayjs(event.ended_at).tz('Asia/Tokyo').format('HH:mm')
+  const date = `${started_at} - ${ended_at}`
+
+  const doc = parse(event.description)
+  const li = doc.querySelector('ul > li')
+  const themes = li ? li?.text.split('\n') : []
+  const event_url = event.event_url
+
+  return {
+    props: {
+      event: {
+        title,
+        place,
+        date,
+        price: {
+          adult: '500円',
+          student: '無料',
+        },
+        themes,
+        event_url,
+      },
+    },
+  }
+}
+
+const getNextConnpassEvent = async (): Promise<ConnpassEvent> => {
   const now = dayjs().tz('Asia/Tokyo')
-  let yyyymm
-  if (now.date() > 14) {
-    yyyymm = now.add(1, 'month').format('YYYYMM')
-  } else {
-    yyyymm = now.format('YYYYMM')
+
+  let event: ConnpassEvent = {
+    event_id: 0,
+    title: '次回の勉強会は未定です',
+    catch: '',
+    description:
+      '<p>Webに関連する最先端のデザイン系＆技術系な話題をするIT勉強会です。  </p>\n<p>この話したい！この悩みを解決させたい！など大募集！</p>\n<p>その他、突発的なネタ提供も大歓迎！  </p>\n<h2>予習してくるとお悩み共有・解決できるかも。(たまに追記)</h2>\n<ul>\n<li>募集中</li>\n</ul>',
+    event_url: 'https://iwdd.net',
+    started_at: '未定',
+    ended_at: '未定',
+    limit: null,
+    hash_tag: 'iwdd',
+    event_type: 'participation',
+    accepted: 1,
+    waiting: 0,
+    updated_at: '2099-01-01T00:00:00+09:00',
+    owner_id: 105582,
+    owner_nickname: 'iwdd',
+    owner_display_name: 'iwdd',
+    place: 'アイーナ 816部屋',
+    address: '岩手県盛岡市盛岡駅西通1丁目7番1号',
+    lat: '39.701927700000',
+    lon: '141.132745400000',
+    series: {
+      id: 2772,
+      title: 'iwdd',
+      url: 'https://iwdd.connpass.com/',
+    },
   }
 
-  try {
+  for (let i = 1; i < 12; i++) {
+    let yyyymm
+    if (now.date() > 14) {
+      yyyymm = now.add(i, 'month').format('YYYYMM')
+    } else {
+      yyyymm = now.format('YYYYMM')
+    }
     const response = await fetch(
       `https://connpass.com/api/v1/event/?series_id=2772&count=10&order=2&ym=${yyyymm}`
     )
     const connpassEvents: ConnpassEvents = await response.json()
-    const event: ConnpassEvent = connpassEvents.events[0]
+    const events: ConnpassEvent[] = connpassEvents.events
 
-    if (
-      event.title === undefined ||
-      event.title === null ||
-      event.title === ''
-    ) {
-      throw new Error('title is undefined')
+    if (events.length !== 0) {
+      event = events[0]
+      break
     }
-
-    const title = event.title
-    const place = event.place
-    const started_at = dayjs(event.started_at)
-      .tz('Asia/Tokyo')
-      .format('YYYY.MM.DD HH:mm')
-    const ended_at = dayjs(event.ended_at).tz('Asia/Tokyo').format('HH:mm')
-    const date = `${started_at} - ${ended_at}`
-
-    const doc = parse(event.description)
-    const li = doc.querySelector('ul > li')
-    const themes = li ? li?.text.split('\n') : []
-    const event_url = event.event_url
-
-    return {
-      props: {
-        event: {
-          title,
-          place,
-          date,
-          price: {
-            adult: '500円',
-            student: '無料',
-          },
-          themes,
-          event_url,
-        },
-      },
-    }
-  } catch (error) {
-    console.error(error)
   }
+  return event
 }
 
 export default Home
