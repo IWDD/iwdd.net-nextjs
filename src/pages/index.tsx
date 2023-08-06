@@ -137,13 +137,8 @@ const getNextConnpassEvent = async (): Promise<ConnpassEvent> => {
     },
   }
 
-  for (let i = 1; i < 12; i++) {
-    let yyyymm
-    if (now.date() > 14) {
-      yyyymm = now.add(i, 'month').format('YYYYMM')
-    } else {
-      yyyymm = now.format('YYYYMM')
-    }
+  for (let i = 0; i < 12; i++) {
+    const yyyymm = now.add(i, 'month').format('YYYYMM')
     const response = await fetch(
       `https://connpass.com/api/v1/event/?series_id=2772&count=10&order=2&ym=${yyyymm}`,
     )
