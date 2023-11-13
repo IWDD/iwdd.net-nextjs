@@ -10,7 +10,7 @@ jobs:
     strategy:
       matrix:
         runner: [ubuntu-latest]
-        node: [18]
+        node: [20]
     name: build on node ${{ matrix.node }} ${{ matrix.runner }}
     steps:
       - uses: actions/checkout@v4
