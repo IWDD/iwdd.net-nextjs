@@ -19,13 +19,12 @@ export const metadata: Metadata = {
 
 const Home = async () => {
   const event = await getNextEvents()
-  const title = event.title
   const place = event.place
-  const start_at = dayjs(event.start_at)
-    .tz('Asia/Tokyo')
-    .format('YYYY.MM.DD HH:mm')
+  const start_date = dayjs(event.start_at).tz('Asia/Tokyo').format('YYYY.MM.DD')
+  const start_at = dayjs(event.start_at).tz('Asia/Tokyo').format('HH:mm')
   const end_at = dayjs(event.end_at).tz('Asia/Tokyo').format('HH:mm')
-  const date = `${start_at} - ${end_at}`
+  const date = `${start_date} ${start_at} - ${end_at}`
+  const title = `IWDD (vol.${event.event_id}) / ${event.place} ${start_at}〜`
 
   const topics = event.topics
   const event_url = event.event_url

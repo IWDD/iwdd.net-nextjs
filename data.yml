@@ -1,6 +1,5 @@
 events:
   - event_id: 209
-    title: 'IWDD (vol.209) / アイーナ816部屋 14:00〜'
     description: 'Webに関連する最先端のデータをするIT勉強会です。'
     topics:
       - '募集中1'

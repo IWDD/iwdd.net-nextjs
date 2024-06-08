@@ -4,7 +4,6 @@ export type DataEvents = {
 
 export type DataEvent = {
   event_id: number
-  title: string
   description: string
   topics: string[]
   event_url: string
