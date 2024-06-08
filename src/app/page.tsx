@@ -2,7 +2,7 @@ import { type Metadata } from 'next'
 import Link from 'next/link'
 
 import { formatEventDate } from '@/lib/formatEventDate'
-import { getNextEvents } from '@/lib/getNextEvents'
+import { getNextEvent } from '@/lib/getNextEvent'
 import { type HomeParams } from '@/types/HomeParams'
 
 export const metadata: Metadata = {
@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 }
 
 const Home = async () => {
-  const event = await getNextEvents()
+  const event = await getNextEvent()
   const place = event.place
   const start_date = formatEventDate(event.start_at, 'YYYY.MM.DD')
   const start_at = formatEventDate(event.start_at, 'HH:mm')
