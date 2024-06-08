@@ -1,15 +1,10 @@
-import dayjs from 'dayjs'
-import timezone from 'dayjs/plugin/timezone'
-import utc from 'dayjs/plugin/utc'
 import { type Metadata } from 'next'
 import Link from 'next/link'
 
+import { formatEventDate } from '@/lib/formatEventDate'
 import { getNextEvents } from '@/lib/getNextEvents'
 import { type HomeProps } from '@/types/home'
 
-dayjs.extend(utc)
-dayjs.extend(timezone)
-dayjs.tz.setDefault('Asia/Tokyo')
 
 export const metadata: Metadata = {
   title: 'IWDDはWebデザインとWeb開発のローカルコミュニティー',
@@ -20,9 +15,9 @@ export const metadata: Metadata = {
 const Home = async () => {
   const event = await getNextEvents()
   const place = event.place
-  const start_date = dayjs(event.start_at).tz('Asia/Tokyo').format('YYYY.MM.DD')
-  const start_at = dayjs(event.start_at).tz('Asia/Tokyo').format('HH:mm')
-  const end_at = dayjs(event.end_at).tz('Asia/Tokyo').format('HH:mm')
+  const start_date = formatEventDate(event.start_at, 'YYYY.MM.DD')
+  const start_at = formatEventDate(event.start_at, 'HH:mm')
+  const end_at = formatEventDate(event.end_at, 'HH:mm')
   const date = `${start_date} ${start_at} - ${end_at}`
   const title = `IWDD (vol.${event.event_id}) / ${event.place} ${start_at}〜`
 
