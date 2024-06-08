@@ -1,0 +1,98 @@
+import dayjs from 'dayjs'
+import timezone from 'dayjs/plugin/timezone'
+import utc from 'dayjs/plugin/utc'
+import { type Metadata } from 'next'
+import Link from 'next/link'
+import { parse } from 'node-html-parser'
+
+import { getNextEvents } from '@/lib/getNextEvents'
+import { type HomeProps } from '@/types/home'
+
+dayjs.extend(utc)
+dayjs.extend(timezone)
+dayjs.tz.setDefault('Asia/Tokyo')
+
+export const metadata: Metadata = {
+  title: 'IWDDはWebデザインとWeb開発のローカルコミュニティー',
+  description:
+    '毎月第2土曜日に WEB系の最先端の勉強会を 岩手県盛岡市で開催しています。',
+}
+
+const Home = async () => {
+  const event = await getNextEvents()
+  const title = event.title
+  const place = event.place
+  const started_at = dayjs(event.started_at)
+    .tz('Asia/Tokyo')
+    .format('YYYY.MM.DD HH:mm')
+  const ended_at = dayjs(event.ended_at).tz('Asia/Tokyo').format('HH:mm')
+  const date = `${started_at} - ${ended_at}`
+
+  const doc = parse(event.description)
+  const li = doc.querySelector('ul > li')
+  const themes = li ? li?.text.split('\n') : []
+  const event_url = event.event_url
+
+  const params: HomeProps = {
+    event: {
+      title,
+      place,
+      date,
+      price: {
+        adult: '500円',
+        student: '無料',
+      },
+      themes,
+      event_url,
+    },
+  }
+
+  return (
+    <main className="container mx-auto px-4 text-center text-sm subpixel-antialiased md:px-20 lg:px-40">
+      <h1 className="mx-auto w-1/2 py-12 opacity-80 md:w-1/3">
+        <img
+          src="/iwdd_logo.svg"
+          alt="IWDD Logo"
+          width="384"
+          height="90"
+          className="opacity-80"
+        />
+      </h1>
+      <h2 className="border-t py-10 text-iwdd">{params.event.title}</h2>
+      <dl>
+        <dt className="pt-4 text-iwdd">会場</dt>
+        <dd>{params.event.place}</dd>
+        <dt className="pt-4 text-iwdd">開催日</dt>
+        <dd>{params.event.date}</dd>
+        <dt className="pt-4 text-iwdd">参加費</dt>
+        <dd>
+          <dl className="grid grid-cols-2 grid-rows-1 gap-x-2">
+            <dt className="place-self-end">社会人</dt>
+            <dd className="place-self-start">{params.event.price.adult}</dd>
+            <dt className="place-self-end">学生</dt>
+            <dd className="place-self-start">{params.event.price.student}</dd>
+          </dl>
+        </dd>
+        <dt className="pt-4 text-iwdd">今月のお題</dt>
+        <dd>
+          <ul>
+            {params.event.themes.map((d, i) => {
+              return <li key={i}>{d}</li>
+            })}
+          </ul>
+        </dd>
+        <dt className="pt-4 text-iwdd">参加申し込み</dt>
+        <dd>
+          <Link
+            href={params.event.event_url}
+            className="underline hover:no-underline"
+          >
+            {params.event.event_url}
+          </Link>
+        </dd>
+      </dl>
+    </main>
+  )
+}
+
+export default Home
