@@ -1,11 +1,11 @@
-export type ConnpassEvents = {
+export type DataEvents = {
   results_start: number
   results_returned: number
   results_available: number
-  events: ConnpassEvent[]
+  events: DataEvent[]
 }
 
-export type ConnpassEvent = {
+export type DataEvent = {
   event_id: number
   title: string
   catch: strin
