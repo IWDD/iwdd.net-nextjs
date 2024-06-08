@@ -1,25 +1,13 @@
 events:
   - event_id: 209
-    title: 'IWDD (vol.209) / アイーナ816部屋 14:00〜'
-    catch: ''
-    description: '<p>Webに関連する最先端のデータをするIT勉強会です。</p><ul><li>募集中</li></ul>'
+    description: 'Webに関連する最先端のデータをするIT勉強会です。'
+    topics:
+      - '募集中'
     event_url: 'https://iwdd.connpass.com/event/284498/'
-    started_at: '2024-07-13T14:00:00+09:00'
-    ended_at: '2024-07-13T17:00:00+09:00'
-    limit: null
+    start_at: '2024-07-13T14:00:00+09:00'
+    end_at: '2024-07-13T17:00:00+09:00'
     hash_tag: 'iwdd'
-    event_type: 'participation'
-    accepted: 1
-    waiting: 0
-    updated_at: '2024-06-08T00:00:00+09:00'
-    owner_id: 105582
-    owner_nickname: 'iwdd'
-    owner_display_name: 'iwdd'
     place: 'アイーナ 816部屋'
     address: '岩手県盛岡市盛岡駅西通1丁目7番1号'
-    lat: '39.701927700000'
-    lon: '141.132745400000'
-    series:
-      id: 2772
-      title: 'iwdd'
-      url: 'https://iwdd.connpass.com/'
+    lat: '39.7019'
+    lon: '141.1327'

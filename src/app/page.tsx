@@ -1,16 +1,9 @@
-import dayjs from 'dayjs'
-import timezone from 'dayjs/plugin/timezone'
-import utc from 'dayjs/plugin/utc'
 import { type Metadata } from 'next'
 import Link from 'next/link'
-import { parse } from 'node-html-parser'
 
-import { getNextEvents } from '@/lib/getNextEvents'
-import { type HomeProps } from '@/types/home'
-
-dayjs.extend(utc)
-dayjs.extend(timezone)
-dayjs.tz.setDefault('Asia/Tokyo')
+import { formatEventDate } from '@/lib/formatEventDate'
+import { getNextEvent } from '@/lib/getNextEvent'
+import { type HomeParams } from '@/types/HomeParams'
 
 export const metadata: Metadata = {
   title: 'IWDDはWebデザインとWeb開発のローカルコミュニティー',
@@ -19,21 +12,17 @@ export const metadata: Metadata = {
 }
 
 const Home = async () => {
-  const event = await getNextEvents()
-  const title = event.title
+  const event = await getNextEvent()
   const place = event.place
-  const started_at = dayjs(event.started_at)
-    .tz('Asia/Tokyo')
-    .format('YYYY.MM.DD HH:mm')
-  const ended_at = dayjs(event.ended_at).tz('Asia/Tokyo').format('HH:mm')
-  const date = `${started_at} - ${ended_at}`
-
-  const doc = parse(event.description)
-  const li = doc.querySelector('ul > li')
-  const themes = li ? li?.text.split('\n') : []
+  const start_date = formatEventDate(event.start_at, 'YYYY.MM.DD')
+  const start_at = formatEventDate(event.start_at, 'HH:mm')
+  const end_at = formatEventDate(event.end_at, 'HH:mm')
+  const date = `${start_date} ${start_at} - ${end_at}`
+  const title = `IWDD (vol.${event.event_id}) / ${event.place} ${start_at}〜`
+  const topics = event.topics
   const event_url = event.event_url
 
-  const params: HomeProps = {
+  const params: HomeParams = {
     event: {
       title,
       place,
@@ -42,7 +31,7 @@ const Home = async () => {
         adult: '500円',
         student: '無料',
       },
-      themes,
+      topics,
       event_url,
     },
   }
@@ -76,7 +65,7 @@ const Home = async () => {
         <dt className="pt-4 text-iwdd">今月のお題</dt>
         <dd>
           <ul>
-            {params.event.themes.map((d, i) => {
+            {params.event.topics.map((d, i) => {
               return <li key={i}>{d}</li>
             })}
           </ul>

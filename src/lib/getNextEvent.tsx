@@ -4,7 +4,7 @@ import yaml from 'js-yaml'
 
 import { type DataEvent, type DataEvents } from '@/types/DataEvents'
 
-export const getNextEvents = async (): Promise<DataEvent> => {
+export const getNextEvent = async (): Promise<DataEvent> => {
   const file = fs.readFileSync('data.yml', 'utf8')
   const data = yaml.load(file) as DataEvents
 
@@ -13,7 +13,7 @@ export const getNextEvents = async (): Promise<DataEvent> => {
   let targetMonth = dayjs()
   for (let i = 0; i < 5; i++) {
     event = data.events[i]
-    if (dayjs(data.events[i].started_at).isAfter(dayjs())) {
+    if (dayjs(data.events[i].start_at).isAfter(dayjs())) {
       break
     }
     targetMonth = targetMonth.add(1, 'month')
