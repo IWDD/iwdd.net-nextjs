@@ -22,11 +22,11 @@ const Home = async () => {
   const event = await getNextEvents()
   const title = event.title
   const place = event.place
-  const started_at = dayjs(event.started_at)
+  const start_at = dayjs(event.start_at)
     .tz('Asia/Tokyo')
     .format('YYYY.MM.DD HH:mm')
-  const ended_at = dayjs(event.ended_at).tz('Asia/Tokyo').format('HH:mm')
-  const date = `${started_at} - ${ended_at}`
+  const end_at = dayjs(event.end_at).tz('Asia/Tokyo').format('HH:mm')
+  const date = `${start_at} - ${end_at}`
 
   const doc = parse(event.description)
   const li = doc.querySelector('ul > li')

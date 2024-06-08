@@ -7,8 +7,8 @@ export type DataEvent = {
   title: string
   description: string
   event_url: string
-  started_at: string
-  ended_at: string
+  start_at: string
+  end_at: string
   hash_tag: string
   place: string
   address: string
