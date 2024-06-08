@@ -3,7 +3,6 @@ import timezone from 'dayjs/plugin/timezone'
 import utc from 'dayjs/plugin/utc'
 import { type Metadata } from 'next'
 import Link from 'next/link'
-import { parse } from 'node-html-parser'
 
 import { getNextEvents } from '@/lib/getNextEvents'
 import { type HomeProps } from '@/types/home'
@@ -28,9 +27,7 @@ const Home = async () => {
   const end_at = dayjs(event.end_at).tz('Asia/Tokyo').format('HH:mm')
   const date = `${start_at} - ${end_at}`
 
-  const doc = parse(event.description)
-  const li = doc.querySelector('ul > li')
-  const themes = li ? li?.text.split('\n') : []
+  const topics = event.topics
   const event_url = event.event_url
 
   const params: HomeProps = {
@@ -42,7 +39,7 @@ const Home = async () => {
         adult: '500円',
         student: '無料',
       },
-      themes,
+      topics,
       event_url,
     },
   }
@@ -76,7 +73,7 @@ const Home = async () => {
         <dt className="pt-4 text-iwdd">今月のお題</dt>
         <dd>
           <ul>
-            {params.event.themes.map((d, i) => {
+            {params.event.topics.map((d, i) => {
               return <li key={i}>{d}</li>
             })}
           </ul>

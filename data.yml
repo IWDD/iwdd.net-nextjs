@@ -1,7 +1,11 @@
 events:
   - event_id: 209
     title: 'IWDD (vol.209) / アイーナ816部屋 14:00〜'
-    description: '<p>Webに関連する最先端のデータをするIT勉強会です。</p><ul><li>募集中</li></ul>'
+    description: 'Webに関連する最先端のデータをするIT勉強会です。'
+    topics:
+      - '募集中1'
+      - '募集中2'
+      - '募集中3'
     event_url: 'https://iwdd.connpass.com/event/284498/'
     start_at: '2024-07-13T14:00:00+09:00'
     end_at: '2024-07-13T17:00:00+09:00'

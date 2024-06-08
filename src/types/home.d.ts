@@ -7,7 +7,7 @@ export type HomeProps = {
       adult: string
       student: string
     }
-    themes: string[]
+    topics: string[]
     event_url: string
   }
 }
