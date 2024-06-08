@@ -2,13 +2,13 @@ import dayjs from 'dayjs'
 import fs from 'fs'
 import yaml from 'js-yaml'
 
-import { type ConnpassEvent, type ConnpassEvents } from '@/types/connpass'
+import { type DataEvent, type DataEvents } from '@/types/DataEvents'
 
-export const getNextConnpassEvent = async (): Promise<ConnpassEvent> => {
+export const getNextEvents = async (): Promise<DataEvent> => {
   const file = fs.readFileSync('data.yml', 'utf8')
-  const data = yaml.load(file) as ConnpassEvents
+  const data = yaml.load(file) as DataEvents
 
-  let event: ConnpassEvent = data.events[0]
+  let event: DataEvent = data.events[0]
 
   let targetMonth = dayjs()
   for (let i = 0; i < 5; i++) {

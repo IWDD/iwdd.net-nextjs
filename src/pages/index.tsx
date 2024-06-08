@@ -6,7 +6,7 @@ import Head from 'next/head'
 import Link from 'next/link'
 import { parse } from 'node-html-parser'
 
-import { getNextConnpassEvent } from '@/lib/getNextConnpassEvent'
+import { getNextEvents } from '@/lib/getNextEvents'
 import type { HomeProps } from '@/types/home'
 
 dayjs.extend(utc)
@@ -74,7 +74,7 @@ const Home: NextPage<HomeProps> = ({ event }) => {
 export const getStaticProps = async (): Promise<
   { props: HomeProps } | undefined
 > => {
-  const event = await getNextConnpassEvent()
+  const event = await getNextEvents()
   const title = event.title
   const place = event.place
   const started_at = dayjs(event.started_at)
