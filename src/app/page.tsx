@@ -19,7 +19,6 @@ const Home = async () => {
   const end_at = formatEventDate(event.end_at, 'HH:mm')
   const date = `${start_date} ${start_at} - ${end_at}`
   const title = `IWDD (vol.${event.event_id}) / ${event.place} ${start_at}〜`
-
   const topics = event.topics
   const event_url = event.event_url
 
