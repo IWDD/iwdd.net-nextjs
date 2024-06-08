@@ -3,8 +3,7 @@ import Link from 'next/link'
 
 import { formatEventDate } from '@/lib/formatEventDate'
 import { getNextEvents } from '@/lib/getNextEvents'
-import { type HomeProps } from '@/types/home'
-
+import { type HomeParams } from '@/types/HomeParams'
 
 export const metadata: Metadata = {
   title: 'IWDDはWebデザインとWeb開発のローカルコミュニティー',
@@ -24,7 +23,7 @@ const Home = async () => {
   const topics = event.topics
   const event_url = event.event_url
 
-  const params: HomeProps = {
+  const params: HomeParams = {
     event: {
       title,
       place,
