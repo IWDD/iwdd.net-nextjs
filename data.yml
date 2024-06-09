@@ -208,3 +208,87 @@ events:
       - iwdd
     topics:
       - 募集中
+  - vol: 225
+    event_url: https://iwdd.connpass.com/event/321873/
+    start_at: 2025-12-13T14:00:00+09:00
+    end_at: 2025-12-13T17:00:00+09:00
+    place: アイーナ 816部屋
+    price:
+      general: 500
+      student: 0
+    hash_tags:
+      - iwdd
+    topics:
+      - 募集中
+  - vol: 226
+    event_url: https://iwdd.connpass.com/event/321874/
+    start_at: 2026-01-10T14:00:00+09:00
+    end_at: 2026-01-10T17:00:00+09:00
+    place: アイーナ 816部屋
+    price:
+      general: 500
+      student: 0
+    hash_tags:
+      - iwdd
+    topics:
+      - 募集中
+  - vol: 227
+    event_url: https://iwdd.connpass.com/event/321875/
+    start_at: 2026-02-14T14:00:00+09:00
+    end_at: 2026-02-14T17:00:00+09:00
+    place: アイーナ 816部屋
+    price:
+      general: 500
+      student: 0
+    hash_tags:
+      - iwdd
+    topics:
+      - 募集中
+  - vol: 228
+    event_url: https://iwdd.connpass.com/event/321876/
+    start_at: 2026-03-14T14:00:00+09:00
+    end_at: 2026-03-14T17:00:00+09:00
+    place: アイーナ 816部屋
+    price:
+      general: 500
+      student: 0
+    hash_tags:
+      - iwdd
+    topics:
+      - 募集中
+  - vol: 229
+    event_url: https://iwdd.connpass.com/event/321877/
+    start_at: 2026-04-11T14:00:00+09:00
+    end_at: 2026-04-11T17:00:00+09:00
+    place: アイーナ 816部屋
+    price:
+      general: 500
+      student: 0
+    hash_tags:
+      - iwdd
+    topics:
+      - 募集中
+  - vol: 230
+    event_url: https://iwdd.connpass.com/event/321878/
+    start_at: 2026-05-09T14:00:00+09:00
+    end_at: 2026-05-09T17:00:00+09:00
+    place: アイーナ 816部屋
+    price:
+      general: 500
+      student: 0
+    hash_tags:
+      - iwdd
+    topics:
+      - 募集中
+  - vol: 231
+    event_url: https://iwdd.connpass.com/event/321879/
+    start_at: 2026-06-13T14:00:00+09:00
+    end_at: 2026-06-13T17:00:00+09:00
+    place: アイーナ 816部屋
+    price:
+      general: 500
+      student: 0
+    hash_tags:
+      - iwdd
+    topics:
+      - 募集中
