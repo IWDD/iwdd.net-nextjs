@@ -3,15 +3,15 @@ export type DataEvents = {
 }
 
 export type DataEvent = {
-  event_id: number
-  description: string
-  topics: string[]
+  id: number
   event_url: string
   start_at: string
   end_at: string
-  hash_tag: string
   place: string
-  address: string
-  lat: string
-  lon: string
+  price: {
+    general: number
+    student: number
+  }
+  hash_tags: string[]
+  topics: string[]
 }
