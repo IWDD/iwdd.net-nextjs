@@ -6,8 +6,8 @@ export type HomeParams = {
     place: DataEvent['place']
     date: string
     price: {
-      adult: string
-      student: string
+      general: DataEvent['price']['general']
+      student: DataEvent['price']['student']
     }
     topics: DataEvent['topics']
     event_url: DataEvent['event_url']

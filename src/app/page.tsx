@@ -1,7 +1,8 @@
 import { type Metadata } from 'next'
 import Link from 'next/link'
 
-import { formatEventDate } from '@/lib/formatEventDate'
+import { formatPrice } from '@/lib/formatPrice'
+import { getHomeParams } from '@/lib/getHomeParams'
 import { getNextEvent } from '@/lib/getNextEvent'
 import { type HomeParams } from '@/types/HomeParams'
 
@@ -13,28 +14,7 @@ export const metadata: Metadata = {
 
 const Home = async () => {
   const event = await getNextEvent()
-  const place = event.place
-  const start_date = formatEventDate(event.start_at, 'YYYY.MM.DD')
-  const start_at = formatEventDate(event.start_at, 'HH:mm')
-  const end_at = formatEventDate(event.end_at, 'HH:mm')
-  const date = `${start_date} ${start_at} - ${end_at}`
-  const title = `IWDD (vol.${event.event_id}) / ${event.place} ${start_at}〜`
-  const topics = event.topics
-  const event_url = event.event_url
-
-  const params: HomeParams = {
-    event: {
-      title,
-      place,
-      date,
-      price: {
-        adult: '500円',
-        student: '無料',
-      },
-      topics,
-      event_url,
-    },
-  }
+  const params: HomeParams = getHomeParams(event)
 
   return (
     <main className="container mx-auto px-4 text-center text-sm subpixel-antialiased md:px-20 lg:px-40">
@@ -57,9 +37,13 @@ const Home = async () => {
         <dd>
           <dl className="grid grid-cols-2 grid-rows-1 gap-x-2">
             <dt className="place-self-end">社会人</dt>
-            <dd className="place-self-start">{params.event.price.adult}</dd>
+            <dd className="place-self-start">
+              {formatPrice(params.event.price.general)}
+            </dd>
             <dt className="place-self-end">学生</dt>
-            <dd className="place-self-start">{params.event.price.student}</dd>
+            <dd className="place-self-start">
+              {formatPrice(params.event.price.student)}
+            </dd>
           </dl>
         </dd>
         <dt className="pt-4 text-iwdd">今月のお題</dt>
