@@ -14,4 +14,5 @@ export type DataEvent = {
   }
   hash_tags: string[]
   topics: string[]
+  cancelled?: boolean
 }

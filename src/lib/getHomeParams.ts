@@ -2,7 +2,22 @@ import { formatEventDate } from '@/lib/formatEventDate'
 import { type DataEvent } from '@/types/DataEvents'
 import { type HomeParams } from '@/types/HomeParams'
 
-export const getHomeParams = (event: DataEvent): HomeParams => {
+export const getHomeParams = (event: DataEvent | undefined): HomeParams => {
+  if (!event) {
+    return {
+      event: {
+        title: '次回のイベントは未定です',
+        place: '未定',
+        date: '未定',
+        price: {
+          general: 0,
+          student: 0,
+        },
+        topics: ['未定'],
+        event_url: '#',
+      },
+    }
+  }
   return {
     event: {
       title: `IWDD (vol.${event.vol})`,
