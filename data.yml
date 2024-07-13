@@ -45,6 +45,7 @@ events:
       - iwdd
     topics:
       - 募集中
+    cancelled: true
   - vol: 211
     event_url: https://iwdd.connpass.com/event/284500/
     start_at: 2024-09-14T14:00:00+09:00
