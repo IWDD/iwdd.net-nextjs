@@ -27,7 +27,12 @@ events:
     hash_tags:
       - iwdd
     topics:
-      - 募集中
+      - Cloudflare Registrar
+      - Cloudflare DNS
+      - Cloudflare Workers & Pages
+      - Cloudflare Workers
+      - Cloudflare Email Routing
+      - Ideogram
   - vol: 210
     event_url: https://iwdd.connpass.com/event/284499/
     start_at: 2024-08-10T14:00:00+09:00
