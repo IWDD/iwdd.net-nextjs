@@ -16,7 +16,7 @@ export default function RootLayout({
   children: ReactNode
 }>) {
   return (
-    <html lang="en">
+    <html lang="ja">
       <body className={`${shipporiMincho.variable} font-shipporiMincho`}>
         {children}
       </body>
