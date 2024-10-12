@@ -73,7 +73,19 @@ events:
     hash_tags:
       - iwdd
     topics:
-      - 募集中
+      - MailChannels
+      - OAuth
+      - Gmail API
+      - Redis, Valkey
+      - WordPress, FreeWP
+      - Rakuten Mobile
+      - bonding router
+      - フレッツ光クロス
+      - LiveU
+      - SmartTelecaster
+      - SendGrid
+      - Speedify
+      - Cloud Run
   - vol: 213
     event_url: https://iwdd.connpass.com/event/284502/
     start_at: 2024-11-16T14:00:00+09:00
