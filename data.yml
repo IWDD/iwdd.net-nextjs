@@ -57,7 +57,11 @@ events:
     hash_tags:
       - iwdd
     topics:
-      - 募集中
+      - RAG (Retrieval-Augmented Generation)
+      - Passkey
+      - 台風 ゲリラ豪雨
+      - フロントエンドカンファレンス北海道2024
+      - Kaigi on Rails 2024
   - vol: 212
     event_url: https://iwdd.connpass.com/event/284501/
     start_at: 2024-10-12T14:00:00+09:00
