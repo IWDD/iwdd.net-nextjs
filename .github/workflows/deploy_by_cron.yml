@@ -11,7 +11,7 @@ jobs:
     strategy:
       matrix:
         runner: [ubuntu-latest]
-        node: [20]
+        node: [22]
     permissions:
       checks: write
       contents: read
