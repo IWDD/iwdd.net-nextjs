@@ -23,7 +23,7 @@
     "react-dom": "18.3.1"
   },
   "devDependencies": {
-    "@cloudflare/next-on-pages": "1.13.5",
+    "@cloudflare/next-on-pages": "1.13.6",
     "@cloudflare/workers-types": "4.20241112.0",
     "@types/js-yaml": "4.0.9",
     "@types/node": "22.9.0",
