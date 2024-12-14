@@ -109,7 +109,11 @@ events:
     hash_tags:
       - iwdd
     topics:
-      - 募集中
+      - 脱 WordPress 研究会
+      - Next.js
+      - Tailwind CSS
+      - Cloudflare Pages
+      - Cloudflare Workers
   - vol: 215
     event_url: https://iwdd.connpass.com/event/284504/
     start_at: 2025-01-11T14:00:00+09:00
