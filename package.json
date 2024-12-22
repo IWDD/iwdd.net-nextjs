@@ -27,7 +27,7 @@
     "@cloudflare/workers-types": "4.20241218.0",
     "@types/js-yaml": "4.0.9",
     "@types/node": "22.10.2",
-    "@types/react": "19.0.1",
+    "@types/react": "19.0.2",
     "@types/react-dom": "19.0.2",
     "autoprefixer": "10.4.20",
     "cssnano": "7.0.6",
