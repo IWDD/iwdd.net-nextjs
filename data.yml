@@ -125,7 +125,30 @@ events:
     hash_tags:
       - iwdd
     topics:
-      - 募集中
+      - AWS 認定
+      - AWS 黒本
+      - AWS Skill Builder
+      - AWS Skill Builder self-paced labs
+      - Copilot Workspace
+      - AGI
+      - OpenAI
+      - Cloudflare
+      - 年末年始のDDoS攻撃
+      - 年賀状
+      - Adobe Photoプラン値上げ
+      - darktable
+      - Astro 5
+      - 脱 WordPress 研究会
+      - Github Actions
+      - Browse Use
+      - Browse Use WebUI
+      - Computer Use
+      - Model Context Protocol
+      - Google Firestore
+      - Next.js
+      - Cloud Run
+      - Resend
+      - Cloudflare Cache
   - vol: 216
     event_url: https://iwdd.connpass.com/event/284505/
     start_at: 2025-02-08T14:00:00+09:00
