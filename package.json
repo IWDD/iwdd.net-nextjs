@@ -24,7 +24,7 @@
   },
   "devDependencies": {
     "@cloudflare/next-on-pages": "1.13.7",
-    "@cloudflare/workers-types": "4.20250109.0",
+    "@cloudflare/workers-types": "4.20250124.3",
     "@types/js-yaml": "4.0.9",
     "@types/node": "22.10.5",
     "@types/react": "19.0.4",
