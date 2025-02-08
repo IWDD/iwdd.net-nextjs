@@ -2,7 +2,7 @@
   "name": "iwdd.net-nextjs",
   "version": "0.2.0",
   "engines": {
-    "node": "20"
+    "node": "22"
   },
   "private": true,
   "scripts": {
