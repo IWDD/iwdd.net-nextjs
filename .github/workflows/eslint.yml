@@ -10,7 +10,7 @@ jobs:
     strategy:
       matrix:
         runner: [ubuntu-latest]
-        node: [20]
+        node: [22]
     name: eslint with reviewdog on node ${{ matrix.node }} ${{ matrix.runner }}
     steps:
       - uses: actions/checkout@v4
