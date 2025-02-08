@@ -5,20 +5,44 @@
 [https://github.com/IWDD/iwdd.net-nextjs](https://github.com/IWDD/iwdd.net-nextjs)
 がオリジナルのレポジトリです。
 
-## 開発サーバーの起動
+## 開発準備
 
-```bash
-yarn dev
-```
+1. [mise-en-place](https://mise.jdx.dev/) をインストールする
 
-## Lint
+2. mise で nodejs をインストールする
 
-```bash
-yarn lint
-```
+   ```shell
+   mise install
+   ```  
 
-## Build
+3. 依存パッケージをインストールする
 
-```bash
-yarn build
-```
+   ```shell
+   npm ci
+   ```
+
+## 開発サイクル
+
+1. 開発サーバーの起動
+
+   ```shell
+   npm run dev
+   ```
+
+2. Lint
+
+   ```shell
+   npm run lint
+   ```
+
+3. Build
+
+   ```shell
+   npm run build
+   ```
+
+4. CloudFlare Pages のプレビュー
+
+   ```shell
+   npm run preview
+   ```
