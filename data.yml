@@ -160,7 +160,19 @@ events:
     hash_tags:
       - iwdd
     topics:
-      - 募集中
+      - クレジットガイダンス
+      - Google OAuth認証の欠陥
+      - サービス終了後に残っているDNS設定を利用したサブドメインの乗っ取り
+      - IATランサム被害
+      - AIと教育
+      - AIとエンジニア育成
+      - Cursor
+      - Windsurf
+      - Github Workspace Agent
+      - Claudeでペルソナとサイトマップの生成
+      - anyenv
+      - asdf
+      - mise-en-place
   - vol: 217
     event_url: https://iwdd.connpass.com/event/284506/
     start_at: 2025-03-08T14:00:00+09:00
