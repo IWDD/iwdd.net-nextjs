@@ -26,7 +26,7 @@
     "@cloudflare/next-on-pages": "1.13.7",
     "@cloudflare/workers-types": "4.20250204.0",
     "@types/js-yaml": "4.0.9",
-    "@types/node": "22.13.1",
+    "@types/node": "22.13.4",
     "@types/react": "19.0.8",
     "@types/react-dom": "19.0.3",
     "autoprefixer": "10.4.20",
