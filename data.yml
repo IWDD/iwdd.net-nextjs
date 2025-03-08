@@ -184,7 +184,14 @@ events:
     hash_tags:
       - iwdd
     topics:
-      - 募集中
+      - VNE事業者
+      - IPv4 over IPv6での固定IP
+      - MAP-E / DS-Lite / IPIP
+      - 盛岡にフレッツ光クロスが来る
+      - 自作10Gルーター
+      - マイナンバーカードのセキュリティーコード
+      - purgecss
+      - Claude Code
   - vol: 218
     event_url: https://iwdd.connpass.com/event/284507/
     start_at: 2025-04-12T14:00:00+09:00
