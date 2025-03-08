@@ -27,13 +27,13 @@ const Home = async () => {
           className="opacity-80"
         />
       </h1>
-      <h2 className="border-t py-10 text-iwdd">{params.event.title}</h2>
+      <h2 className="text-iwdd border-t py-10">{params.event.title}</h2>
       <dl>
-        <dt className="pt-4 text-iwdd">会場</dt>
+        <dt className="text-iwdd pt-4">会場</dt>
         <dd>{params.event.place}</dd>
-        <dt className="pt-4 text-iwdd">開催日</dt>
+        <dt className="text-iwdd pt-4">開催日</dt>
         <dd>{params.event.date}</dd>
-        <dt className="pt-4 text-iwdd">参加費</dt>
+        <dt className="text-iwdd pt-4">参加費</dt>
         <dd>
           <dl className="grid grid-cols-2 grid-rows-1 gap-x-2">
             <dt className="place-self-end">社会人</dt>
@@ -46,7 +46,7 @@ const Home = async () => {
             </dd>
           </dl>
         </dd>
-        <dt className="pt-4 text-iwdd">今月のお題</dt>
+        <dt className="text-iwdd pt-4">今月のお題</dt>
         <dd>
           <ul>
             {params.event.topics.map((d, i) => {
@@ -54,7 +54,7 @@ const Home = async () => {
             })}
           </ul>
         </dd>
-        <dt className="pt-4 text-iwdd">参加申し込み</dt>
+        <dt className="text-iwdd pt-4">参加申し込み</dt>
         <dd>
           <Link
             href={params.event.event_url}
