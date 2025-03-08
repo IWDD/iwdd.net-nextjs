@@ -1,12 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Shippori+Mincho&display=swap');
 @import 'tailwindcss';
 
 @theme {
   --color-iwdd: #c70d02;
-}
-
-body {
-  font-family: 'Shippori Mincho', serif;
+  --font-shipporiMincho: var(--font-shipporiMincho)
 }
 
 /*

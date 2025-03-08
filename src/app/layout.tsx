@@ -1,6 +1,14 @@
 import '@/styles/globals.css'
 
+import { Shippori_Mincho } from 'next/font/google'
 import { type ReactNode } from 'react'
+
+const shipporiMincho = Shippori_Mincho({
+  display: 'swap',
+  subsets: ['latin'],
+  variable: '--font-shipporiMincho',
+  weight: ['400', '700'],
+})
 
 export default function RootLayout({
   children,
@@ -9,7 +17,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ja">
-      <body>{children}</body>
+      <body className={`${shipporiMincho.variable} font-shipporiMincho`}>
+        {children}
+      </body>
     </html>
   )
 }
