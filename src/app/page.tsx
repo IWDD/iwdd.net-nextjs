@@ -27,7 +27,9 @@ const Home = async () => {
           className="opacity-80"
         />
       </h1>
-      <h2 className="text-iwdd border-t py-10">{params.event.title}</h2>
+      <h2 className="text-iwdd border-t border-t-gray-200 py-10">
+        {params.event.title}
+      </h2>
       <dl>
         <dt className="text-iwdd pt-4">会場</dt>
         <dd>{params.event.place}</dd>
