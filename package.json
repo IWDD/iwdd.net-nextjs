@@ -25,7 +25,7 @@
   "devDependencies": {
     "@cloudflare/next-on-pages": "1.13.10",
     "@cloudflare/workers-types": "4.20250311.0",
-    "@tailwindcss/postcss": "4.0.13",
+    "@tailwindcss/postcss": "4.0.14",
     "@types/js-yaml": "4.0.9",
     "@types/node": "22.13.10",
     "@types/react": "19.0.10",
