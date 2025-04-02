@@ -12,6 +12,12 @@ updates:
         patterns:
           - "tailwindcss"
           - "@tailwindcss/*"
+      react:
+        patterns:
+          - "react"
+          - "react-dom"
+          - "@types/react"
+          - "@types/react-dom"
   - package-ecosystem: "github-actions"
     directory: "/"
     open-pull-requests-limit: 20
