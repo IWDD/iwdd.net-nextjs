@@ -36,3 +36,7 @@ yarn-error.log*
 
 # open next
 /.open-next
+
+# wrangler
+/.wrangler
+/.dev.vars
