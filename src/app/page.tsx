@@ -5,7 +5,6 @@ import RecentTopics from '@/app/components/RecentTopics'
 import { formatPrice } from '@/lib/formatPrice'
 import { getHomeParams } from '@/lib/getHomeParams'
 import { getNextEvent } from '@/lib/getNextEvent'
-import { getTopics } from '@/lib/getTopics'
 import { type HomeParams } from '@/types/HomeParams'
 
 export const metadata: Metadata = {

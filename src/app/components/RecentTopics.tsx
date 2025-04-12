@@ -1,7 +1,9 @@
+'use server'
+
 import { getTopics } from '@/lib/getTopics'
 
-export default function RecentTopics() {
-  const topics: string[] = getTopics()
+export default async function RecentTopics() {
+  const topics = await getTopics()
 
   return (
     <section className="pt-10 pb-10">
