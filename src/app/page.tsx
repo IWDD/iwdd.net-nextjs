@@ -1,12 +1,12 @@
 import { type Metadata } from 'next'
 import Link from 'next/link'
 
+import RecentTopics from '@/app/components/RecentTopics'
 import { formatPrice } from '@/lib/formatPrice'
 import { getHomeParams } from '@/lib/getHomeParams'
 import { getNextEvent } from '@/lib/getNextEvent'
+import { getTopics } from '@/lib/getTopics'
 import { type HomeParams } from '@/types/HomeParams'
-import { getTopics } from '../lib/getTopics';
-import RecentTopics from './components/RecentTopics';
 
 export const metadata: Metadata = {
   title: 'IWDDはWebデザインとWeb開発のローカルコミュニティー',
