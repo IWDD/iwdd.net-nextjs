@@ -1,6 +1,6 @@
 import { formatEventDate } from '@/lib/formatEventDate'
-import { type DataEvent } from '@/types/DataEvents'
-import { type HomeParams } from '@/types/HomeParams'
+import type { DataEvent } from '@/types/DataEvents'
+import type { HomeParams } from '@/types/HomeParams'
 
 export const getHomeParams = (event: DataEvent | undefined): HomeParams => {
   if (!event) {

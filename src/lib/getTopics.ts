@@ -1,33 +1,12 @@
-import fs from 'fs/promises'
-import yaml from 'js-yaml'
-import path from 'path'
-
-import { DataEvents } from '@/types/DataEvents'
+import data from '@/data.json'
+import type { DataEvents } from '@/types/DataEvents'
 
 // トピックスを取得する関数
 export const getTopics = async (): Promise<string[]> => {
-  const filePath = path.join(process.cwd(), 'data.yml')
-
-  // 非同期でファイルを読み込む
-  let fileContents: string
-  try {
-    fileContents = await fs.readFile(filePath, 'utf8')
-  } catch (error) {
-    console.error('Error reading data.yml:', error)
-    return []
-  }
-
-  // YAML をパースして型チェック
-  let data: DataEvents
-  try {
-    data = yaml.load(fileContents) as DataEvents
-  } catch (error) {
-    console.error('Error parsing YAML:', error)
-    return []
-  }
+  const parsedData = data as DataEvents
 
   // トピックスを抽出するロジック
-  return extractUniqueTopics(data)
+  return extractUniqueTopics(parsedData)
 }
 
 // ユニークなトピックスを抽出するヘルパー関数

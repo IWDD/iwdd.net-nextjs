@@ -1,4 +1,4 @@
-import { DataEvent } from '@/types/DataEvents'
+import type { DataEvent } from '@/types/DataEvents'
 
 export type HomeParams = {
   event: {
