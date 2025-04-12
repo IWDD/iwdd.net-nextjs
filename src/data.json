@@ -257,7 +257,12 @@
         "iwdd"
       ],
       "topics": [
-        "募集中"
+        "Windows 10 EOL",
+        "Office 365 賢い方",
+        "Microsoft Authorized Refurbisher",
+        "LM Studio",
+        "VS CodeのGithub Copilot agentsでtopics一覧表示を実装",
+        "IntelliJ IDEA AI AssistantのClaude 3.7 sonnetで実装を検証 "
       ]
     },
     {
