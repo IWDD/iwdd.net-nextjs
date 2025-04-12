@@ -10,14 +10,13 @@ jobs:
     strategy:
       matrix:
         runner: [ubuntu-latest]
-        node: [22]
     name: build on node ${{ matrix.node }} ${{ matrix.runner }}
     steps:
       - uses: actions/checkout@v4
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: ${{ matrix.node }}
+          node-version-file: '.node-version'
       - name: npm ci
         run: npm ci
       - name: build
