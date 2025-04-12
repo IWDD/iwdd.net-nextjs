@@ -32,7 +32,7 @@
     "@types/react-dom": "19.1.1",
     "cssnano": "7.0.6",
     "eslint-config-next": "15.3.0",
-    "eslint-config-prettier": "10.1.1",
+    "eslint-config-prettier": "10.1.2",
     "eslint-plugin-next-on-pages": "1.13.12",
     "eslint-plugin-prettier": "5.2.6",
     "eslint-plugin-simple-import-sort": "12.1.1",
