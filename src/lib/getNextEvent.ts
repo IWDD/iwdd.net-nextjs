@@ -1,7 +1,7 @@
 import dayjs from 'dayjs'
 
 import data from '@/data.json'
-import { type DataEvent, type DataEvents } from '@/types/DataEvents'
+import type { DataEvent, DataEvents } from '@/types/DataEvents'
 
 export const getNextEvent = async (): Promise<DataEvent | undefined> => {
   const parsedData = data as DataEvents

@@ -7,7 +7,7 @@ export default async function RecentTopics() {
 
   return (
     <section className="pt-10 pb-10">
-      <h2 className="text-iwdd border-t border-t-gray-200 py-10">
+      <h2 className="border-t border-t-gray-200 py-10 text-iwdd">
         最近話題に出たキーワード
       </h2>
       <div className="flex flex-wrap gap-2">

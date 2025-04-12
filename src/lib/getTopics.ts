@@ -1,5 +1,5 @@
 import data from '@/data.json'
-import { DataEvents } from '@/types/DataEvents'
+import type { DataEvents } from '@/types/DataEvents'
 
 // トピックスを取得する関数
 export const getTopics = async (): Promise<string[]> => {
