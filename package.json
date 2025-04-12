@@ -4,6 +4,14 @@
   "engines": {
     "node": "22"
   },
+  "cpu": [
+    "x64",
+    "arm64"
+  ],
+  "os": [
+    "linux",
+    "darwin"
+  ],
   "private": true,
   "scripts": {
     "dev": "next dev",
