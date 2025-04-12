@@ -5,6 +5,8 @@ import { formatPrice } from '@/lib/formatPrice'
 import { getHomeParams } from '@/lib/getHomeParams'
 import { getNextEvent } from '@/lib/getNextEvent'
 import { type HomeParams } from '@/types/HomeParams'
+import { getTopics } from '../lib/getTopics';
+import RecentTopics from './components/RecentTopics';
 
 export const metadata: Metadata = {
   title: 'IWDDはWebデザインとWeb開発のローカルコミュニティー',
@@ -66,6 +68,7 @@ const Home = async () => {
           </Link>
         </dd>
       </dl>
+      <RecentTopics />
     </main>
   )
 }
