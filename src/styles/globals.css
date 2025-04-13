@@ -4,12 +4,3 @@
   --color-iwdd: #c70d02;
   --font-shipporiMincho: var(--font-shipporiMincho)
 }
-
-@layer base {
-  h1 {
-    @apply text-2xl
-  }
-  h2 {
-    @apply text-xl
-  }
-}

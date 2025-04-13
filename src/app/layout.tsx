@@ -16,8 +16,10 @@ export default function RootLayout({
   children: ReactNode
 }>) {
   return (
-    <html lang="ja">
-      <body className={`${shipporiMincho.variable} font-shipporiMincho`}>
+    <html lang={'ja'}>
+      <body
+        className={`${shipporiMincho.variable} font-shipporiMincho subpixel-antialiased`}
+      >
         {children}
       </body>
     </html>

@@ -6,20 +6,20 @@ export default async function RecentTopics() {
   const topics = await getTopics()
 
   return (
-    <section className="pt-10 pb-10">
-      <h2 className="border-t border-t-gray-200 py-10 text-iwdd">
-        最近話題に出たキーワード
-      </h2>
-      <div className="flex flex-wrap justify-center gap-2">
+    <>
+      <h2 className={'mb-10 text-xl text-iwdd'}>最近話題に出たキーワード</h2>
+      <div className={'flex flex-row flex-wrap justify-center gap-2 px-1'}>
         {topics.map((topic, index) => (
           <span
             key={index}
-            className="rounded-full bg-gray-200 px-2 py-1 text-xs font-medium text-gray-800 hover:bg-gray-300"
+            className={
+              'rounded-full bg-gray-200 px-3 py-1 text-xs text-gray-800 hover:bg-gray-300'
+            }
           >
             {topic}
           </span>
         ))}
       </div>
-    </section>
+    </>
   )
 }
