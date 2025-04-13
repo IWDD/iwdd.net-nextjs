@@ -10,7 +10,7 @@ export default async function RecentTopics() {
       <h2 className="border-t border-t-gray-200 py-10 text-iwdd">
         最近話題に出たキーワード
       </h2>
-      <div className="flex flex-wrap gap-2">
+      <div className="flex flex-wrap justify-center gap-2">
         {topics.map((topic, index) => (
           <span
             key={index}
