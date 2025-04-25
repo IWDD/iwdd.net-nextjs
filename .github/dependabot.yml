@@ -18,6 +18,14 @@ updates:
           - "react-dom"
           - "@types/react"
           - "@types/react-dom"
+      eslint:
+        patterns:
+          - "eslint"
+          - "@eslint/*"
+      nextjs:
+        patterns:
+          - "next"
+          - "eslint-config-next"
   - package-ecosystem: "github-actions"
     directory: "/"
     open-pull-requests-limit: 20
