@@ -10,13 +10,14 @@ jobs:
     strategy:
       matrix:
         runner: [ubuntu-latest]
+        node: [22.14.0]
     name: eslint with reviewdog on node ${{ matrix.node }} ${{ matrix.runner }}
     steps:
       - uses: actions/checkout@v4
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version-file: '.node-version'
+          node-version: ${{ matrix.node }}
       - name: npm ci
         run: npm ci
       - uses: reviewdog/action-eslint@v1
