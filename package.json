@@ -35,7 +35,7 @@
     "@eslint/js": "9.26.0",
     "@opennextjs/cloudflare": "1.0.0-beta.3",
     "@tailwindcss/postcss": "4.1.6",
-    "@types/node": "22.15.17",
+    "@types/node": "22.15.18",
     "@types/react": "19.1.4",
     "@types/react-dom": "19.1.5",
     "cssnano": "7.0.6",
