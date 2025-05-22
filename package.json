@@ -38,7 +38,7 @@
     "@types/node": "22.15.17",
     "@types/react": "19.1.4",
     "@types/react-dom": "19.1.5",
-    "cssnano": "7.0.6",
+    "cssnano": "7.0.7",
     "esbuild": "0.25.4",
     "eslint": "9.26.0",
     "eslint-config-next": "15.3.2",
