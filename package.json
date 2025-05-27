@@ -36,7 +36,7 @@
     "@opennextjs/cloudflare": "1.0.4",
     "@tailwindcss/postcss": "4.1.7",
     "@types/node": "22.15.21",
-    "@types/react": "19.1.5",
+    "@types/react": "19.1.6",
     "@types/react-dom": "19.1.5",
     "cssnano": "7.0.7",
     "esbuild": "0.25.4",
