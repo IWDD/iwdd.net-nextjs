@@ -32,7 +32,7 @@
   "devDependencies": {
     "@cloudflare/workers-types": "4.20250828.1",
     "@eslint/eslintrc": "3.3.1",
-    "@eslint/js": "9.31.0",
+    "@eslint/js": "9.34.0",
     "@opennextjs/cloudflare": "1.6.5",
     "@tailwindcss/postcss": "4.1.11",
     "@types/node": "24.0.13",
@@ -40,7 +40,7 @@
     "@types/react-dom": "19.1.6",
     "cssnano": "7.1.0",
     "esbuild": "0.25.9",
-    "eslint": "9.31.0",
+    "eslint": "9.34.0",
     "eslint-config-next": "15.4.6",
     "eslint-plugin-prettier": "5.5.3",
     "eslint-plugin-simple-import-sort": "12.1.1",
