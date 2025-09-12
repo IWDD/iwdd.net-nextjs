@@ -33,7 +33,7 @@
     "@cloudflare/workers-types": "4.20250911.0",
     "@eslint/eslintrc": "3.3.1",
     "@eslint/js": "9.34.0",
-    "@opennextjs/cloudflare": "1.6.5",
+    "@opennextjs/cloudflare": "1.8.2",
     "@tailwindcss/postcss": "4.1.13",
     "@types/node": "24.3.0",
     "@types/react": "19.1.12",
