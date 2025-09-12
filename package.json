@@ -24,7 +24,7 @@
     "cf-typegen": "wrangler types --env-interface CloudflareEnv cloudflare-env.d.ts"
   },
   "dependencies": {
-    "dayjs": "1.11.13",
+    "dayjs": "1.11.18",
     "next": "15.5.2",
     "react": "19.1.1",
     "react-dom": "19.1.1"
