@@ -8,24 +8,46 @@ updates:
       time: "05:00"
       timezone: "Asia/Tokyo"
     groups:
-      tailwindcss:
+      typescript:
         patterns:
-          - "tailwindcss"
-          - "@tailwindcss/*"
+          - "typescript"
+          - "@types/*"
       react:
         patterns:
           - "react"
           - "react-dom"
-          - "@types/react"
-          - "@types/react-dom"
-      eslint:
-        patterns:
-          - "eslint"
-          - "@eslint/*"
       nextjs:
         patterns:
           - "next"
           - "eslint-config-next"
+      tailwindcss:
+        patterns:
+          - "tailwindcss"
+          - "@tailwindcss/*"
+          - "postcss"
+          - "cssnano"
+      eslint:
+        patterns:
+          - "eslint"
+          - "@eslint/*"
+      eslint-plugins:
+        patterns:
+          - "eslint-plugin-*"
+          - "eslint-config-*"
+        exclude-patterns:
+          - "eslint-config-next"
+      prettier:
+        patterns:
+          - "prettier"
+          - "prettier-plugin-*"
+      cloudflare:
+        patterns:
+          - "@cloudflare/*"
+          - "@opennextjs/cloudflare"
+          - "wrangler"
+      build-tools:
+        patterns:
+          - "esbuild"
   - package-ecosystem: "github-actions"
     directory: "/"
     open-pull-requests-limit: 20
