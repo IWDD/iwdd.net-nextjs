@@ -40,3 +40,9 @@ yarn-error.log*
 # wrangler
 /.wrangler
 /.dev.vars
+
+# serena
+/.serena
+
+# claude local settings
+/.claude/settings.local.json
