@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "dev3000": {
+      "type": "http",
+      "url": "http://localhost:3684/mcp"
+    },
+    "serena": {
+      "command": "uvx",
+      "args": ["--from", "git+https://github.com/oraios/serena", "serena", "start-mcp-server", "--enable-web-dashboard", "false"]
+    }
+  }
+}
