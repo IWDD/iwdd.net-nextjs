@@ -1,30 +1,23 @@
-import path from 'node:path'
-import { fileURLToPath } from 'node:url'
-
-import { FlatCompat } from '@eslint/eslintrc'
-import js from '@eslint/js'
+import { defineConfig, globalIgnores } from 'eslint/config'
+import nextVitals from 'eslint-config-next/core-web-vitals'
+import nextTs from 'eslint-config-next/typescript'
 import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended'
 import simpleImportSort from 'eslint-plugin-simple-import-sort'
 
-const __filename = fileURLToPath(import.meta.url)
-const __dirname = path.dirname(__filename)
-const compat = new FlatCompat({
-  baseDirectory: __dirname,
-  recommendedConfig: js.configs.recommended,
-  allConfig: js.configs.all,
-})
-
-const config = [
-  {
-    ignores: ['**/.next/', '**/out/', '**/node_modules/', '.open-next/**'],
-  },
-  ...compat.extends('next/core-web-vitals'),
+const eslintConfig = defineConfig([
+  ...nextVitals,
+  ...nextTs,
+  globalIgnores([
+    '.next/**',
+    'out/**',
+    'node_modules/**',
+    'worker-configuration.d.ts',
+  ]),
   eslintPluginPrettierRecommended,
   {
     plugins: {
       'simple-import-sort': simpleImportSort,
     },
-
     rules: {
       'prettier/prettier': [
         'error',
@@ -33,20 +26,19 @@ const config = [
           singleQuote: true,
         },
       ],
-
       'simple-import-sort/imports': 'error',
       'simple-import-sort/exports': 'error',
-
       'no-restricted-imports': [
         'error',
         {
           patterns: ['./', '../'],
         },
       ],
-
       '@next/next/no-img-element': 'off',
+      '@typescript-eslint/consistent-type-imports': 'error',
+      '@typescript-eslint/no-import-type-side-effects': 'error',
     },
   },
-]
+])
 
-export default config
+export default eslintConfig
