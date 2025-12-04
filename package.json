@@ -34,8 +34,8 @@
     "eslint-config-prettier": "10.1.8",
     "eslint-plugin-prettier": "5.5.4",
     "eslint-plugin-simple-import-sort": "12.1.1",
-    "prettier": "3.7.3",
-    "prettier-plugin-tailwindcss": "0.7.1",
+    "prettier": "3.7.4",
+    "prettier-plugin-tailwindcss": "0.7.2",
     "tailwindcss": "4.1.17",
     "typescript": "5.9.3",
     "wrangler": "4.51.0"
