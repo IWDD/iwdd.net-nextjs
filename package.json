@@ -3,7 +3,7 @@
   "version": "0.3.0",
   "type": "module",
   "engines": {
-    "node": "22"
+    "node": "24"
   },
   "private": true,
   "scripts": {
@@ -11,6 +11,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
+    "test": "vitest run",
     "deploy": "opennextjs-cloudflare build && opennextjs-cloudflare deploy",
     "preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview",
     "cf-typegen": "wrangler types --env-interface CloudflareEnv cloudflare-env.d.ts"
@@ -38,6 +39,7 @@
     "prettier-plugin-tailwindcss": "0.7.2",
     "tailwindcss": "4.1.18",
     "typescript": "5.9.3",
+    "vitest": "4.0.15",
     "wrangler": "4.53.0"
   }
 }
