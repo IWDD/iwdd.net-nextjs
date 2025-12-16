@@ -10,22 +10,22 @@ IWDD公式サイト (iwdd.net) - Next.js 16 + React 19で構築されたCloudfla
 
 ```bash
 # 開発サーバー起動
-npm run dev
+pnpm dev
 
 # Lint (ESLint + Prettier)
-npm run lint
+pnpm lint
 
 # テスト (Vitest)
-npm run test
+pnpm test
 
 # ビルド
-npm run build
+pnpm build
 
 # Cloudflare Workersプレビュー
-npm run preview
+pnpm preview
 
 # Cloudflare Workersデプロイ
-npm run deploy
+pnpm deploy
 ```
 
 ## Architecture

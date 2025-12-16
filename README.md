@@ -9,16 +9,16 @@
 
 1. [mise-en-place](https://mise.jdx.dev/) をインストールする
 
-2. mise で nodejs をインストールする
+2. mise で nodejs と pnpm をインストールする
 
    ```shell
    mise install
-   ```  
+   ```
 
 3. 依存パッケージをインストールする
 
    ```shell
-   npm ci
+   pnpm install
    ```
 
 ## 開発サイクル
@@ -26,23 +26,23 @@
 1. 開発サーバーの起動
 
    ```shell
-   npm run dev
+   pnpm dev
    ```
 
 2. Lint
 
    ```shell
-   npm run lint
+   pnpm lint
    ```
 
 3. Build
 
    ```shell
-   npm run build
+   pnpm build
    ```
 
 4. CloudFlare Pages のプレビュー
 
    ```shell
-   npm run preview
+   pnpm preview
    ```
