@@ -5,6 +5,7 @@
   "engines": {
     "node": "24"
   },
+  "packageManager": "pnpm@10.25.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -41,5 +42,14 @@
     "typescript": "5.9.3",
     "vitest": "4.0.15",
     "wrangler": "4.54.0"
+  },
+  "pnpm": {
+    "minimumReleaseAge": "3 days",
+    "onlyBuiltDependencies": [
+      "esbuild",
+      "sharp",
+      "unrs-resolver",
+      "workerd"
+    ]
   }
 }
