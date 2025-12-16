@@ -18,11 +18,13 @@ jobs:
         uses: actions/setup-node@v6
         with:
           node-version: ${{ matrix.node }}
-      - name: npm ci
-        run: npm ci
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+      - name: pnpm install
+        run: pnpm install --frozen-lockfile
       - name: eslint
-        run: npm run lint
+        run: pnpm lint
       - name: test
-        run: npm run test
+        run: pnpm test
       - name: build
-        run: npm run build
+        run: pnpm build
