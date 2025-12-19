@@ -5,13 +5,13 @@ on:
 
 jobs:
   ci:
+    name: Build on Node ${{ matrix.node }} ${{ matrix.runner }}
     runs-on: ${{ matrix.runner }}
     timeout-minutes: 10
     strategy:
       matrix:
         runner: [ubuntu-latest]
         node: [24]
-    name: Build on Node ${{ matrix.node }} ${{ matrix.runner }}
     steps:
       - uses: actions/checkout@v6
       - name: Setup Node
@@ -30,10 +30,14 @@ jobs:
         run: pnpm build
 
   e2e:
-    runs-on: ubuntu-latest
+    name: E2E Test on Node ${{ matrix.node }} ${{ matrix.runner }}
+    runs-on: ${{ matrix.runner }}
     timeout-minutes: 15
     needs: ci
-    name: E2E Tests
+    strategy:
+      matrix:
+        runner: [ubuntu-latest]
+        node: [24]
     steps:
       - uses: actions/checkout@v6
       - name: Setup Node
