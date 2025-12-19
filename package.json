@@ -41,7 +41,7 @@
     "tailwindcss": "4.1.18",
     "typescript": "5.9.3",
     "vitest": "4.0.15",
-    "wrangler": "4.54.0"
+    "wrangler": "4.55.0"
   },
   "pnpm": {
     "minimumReleaseAge": "3 days",
