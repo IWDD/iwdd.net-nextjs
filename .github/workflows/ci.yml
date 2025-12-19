@@ -5,13 +5,13 @@ on:
 
 jobs:
   ci:
+    name: Build on Node ${{ matrix.node }} ${{ matrix.runner }}
     runs-on: ${{ matrix.runner }}
     timeout-minutes: 10
     strategy:
       matrix:
         runner: [ubuntu-latest]
         node: [24]
-    name: build on node ${{ matrix.node }} ${{ matrix.runner }}
     steps:
       - uses: actions/checkout@v6
       - name: Setup Node
@@ -20,11 +20,42 @@ jobs:
           node-version: ${{ matrix.node }}
       - name: Setup pnpm
         uses: pnpm/action-setup@v4
-      - name: pnpm install
+      - name: Install Dependencies
         run: pnpm install --frozen-lockfile
-      - name: eslint
+      - name: Lint
         run: pnpm lint
-      - name: test
+      - name: Test
         run: pnpm test
-      - name: build
+      - name: Build
         run: pnpm build
+
+  e2e:
+    name: E2E Test on Node ${{ matrix.node }} ${{ matrix.runner }}
+    runs-on: ${{ matrix.runner }}
+    timeout-minutes: 15
+    needs: ci
+    strategy:
+      matrix:
+        runner: [ubuntu-latest]
+        node: [24]
+    steps:
+      - uses: actions/checkout@v6
+      - name: Setup Node
+        uses: actions/setup-node@v6
+        with:
+          node-version: 24
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+      - name: Install Dependencies
+        run: pnpm install --frozen-lockfile
+      - name: Install Playwright Browsers
+        run: pnpm exec playwright install --with-deps chromium
+      - name: Run E2E Tests
+        run: pnpm test:e2e
+      - name: Upload Playwright Report
+        uses: actions/upload-artifact@v4
+        if: ${{ !cancelled() }}
+        with:
+          name: playwright-report
+          path: playwright-report/
+          retention-days: 7

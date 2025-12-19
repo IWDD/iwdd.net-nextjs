@@ -13,6 +13,8 @@
     "start": "next start",
     "lint": "eslint",
     "test": "vitest run",
+    "test:e2e": "playwright test",
+    "test:e2e:ui": "playwright test --ui",
     "deploy": "opennextjs-cloudflare build && opennextjs-cloudflare deploy",
     "preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview",
     "cf-typegen": "wrangler types --env-interface CloudflareEnv cloudflare-env.d.ts"
@@ -25,6 +27,7 @@
   },
   "devDependencies": {
     "@opennextjs/cloudflare": "1.14.6",
+    "@playwright/test": "1.57.0",
     "@tailwindcss/postcss": "4.1.18",
     "@types/node": "25.0.3",
     "@types/react": "19.2.7",
@@ -44,12 +47,6 @@
     "wrangler": "4.55.0"
   },
   "pnpm": {
-    "minimumReleaseAge": "3 days",
-    "onlyBuiltDependencies": [
-      "esbuild",
-      "sharp",
-      "unrs-resolver",
-      "workerd"
-    ]
+    "minimumReleaseAge": "3 days"
   }
 }
