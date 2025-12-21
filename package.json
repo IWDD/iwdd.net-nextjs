@@ -26,7 +26,7 @@
     "react-dom": "19.2.3"
   },
   "devDependencies": {
-    "@opennextjs/cloudflare": "1.14.6",
+    "@opennextjs/cloudflare": "1.14.7",
     "@playwright/test": "1.57.0",
     "@tailwindcss/postcss": "4.1.18",
     "@types/node": "25.0.3",
@@ -44,7 +44,7 @@
     "tailwindcss": "4.1.18",
     "typescript": "5.9.3",
     "vitest": "4.0.16",
-    "wrangler": "4.55.0"
+    "wrangler": "4.56.0"
   },
   "pnpm": {
     "minimumReleaseAge": "3 days"
