@@ -456,7 +456,12 @@
         "iwdd"
       ],
       "topics": [
-        "募集中"
+        "国際電話休止",
+        "Hacklore",
+        "Qilin",
+        "fnox",
+        "Claude in Chrome",
+        "Macbook Pro 14"
       ]
     },
     {
@@ -736,6 +741,108 @@
       "event_url": "https://iwdd.connpass.com/event/358933/",
       "start_at": "2027-06-12T05:00:00.000Z",
       "end_at": "2027-06-12T08:00:00.000Z",
+      "place": "アイーナ 816部屋",
+      "price": {
+        "general": 500,
+        "student": 0
+      },
+      "hash_tags": [
+        "iwdd"
+      ],
+      "topics": [
+        "募集中"
+      ]
+    },
+    {
+      "vol": 244,
+      "event_url": "https://iwdd.connpass.com/event/381200/",
+      "start_at": "2027-07-10T05:00:00.000Z",
+      "end_at": "2027-07-10T08:00:00.000Z",
+      "place": "アイーナ 816部屋",
+      "price": {
+        "general": 500,
+        "student": 0
+      },
+      "hash_tags": [
+        "iwdd"
+      ],
+      "topics": [
+        "募集中"
+      ]
+    },
+    {
+      "vol": 245,
+      "event_url": "https://iwdd.connpass.com/event/381201/",
+      "start_at": "2027-09-11T05:00:00.000Z",
+      "end_at": "2027-09-11T08:00:00.000Z",
+      "place": "アイーナ 816部屋",
+      "price": {
+        "general": 500,
+        "student": 0
+      },
+      "hash_tags": [
+        "iwdd"
+      ],
+      "topics": [
+        "募集中"
+      ]
+    },
+    {
+      "vol": 246,
+      "event_url": "https://iwdd.connpass.com/event/381202/",
+      "start_at": "2027-10-09T05:00:00.000Z",
+      "end_at": "2027-10-09T08:00:00.000Z",
+      "place": "アイーナ 816部屋",
+      "price": {
+        "general": 500,
+        "student": 0
+      },
+      "hash_tags": [
+        "iwdd"
+      ],
+      "topics": [
+        "募集中"
+      ]
+    },
+    {
+      "vol": 247,
+      "event_url": "https://iwdd.connpass.com/event/381203/",
+      "start_at": "2027-11-20T05:00:00.000Z",
+      "end_at": "2027-11-20T08:00:00.000Z",
+      "place": "アイーナ 816部屋",
+      "price": {
+        "general": 500,
+        "student": 0
+      },
+      "hash_tags": [
+        "iwdd"
+      ],
+      "topics": [
+        "募集中"
+      ]
+    },
+    {
+      "vol": 248,
+      "event_url": "https://iwdd.connpass.com/event/381204/",
+      "start_at": "2027-12-11T05:00:00.000Z",
+      "end_at": "2027-12-11T08:00:00.000Z",
+      "place": "アイーナ 816部屋",
+      "price": {
+        "general": 500,
+        "student": 0
+      },
+      "hash_tags": [
+        "iwdd"
+      ],
+      "topics": [
+        "募集中"
+      ]
+    },
+    {
+      "vol": 249,
+      "event_url": "https://iwdd.connpass.com/event/381205/",
+      "start_at": "2028-01-08T05:00:00.000Z",
+      "end_at": "2028-01-08T08:00:00.000Z",
       "place": "アイーナ 816部屋",
       "price": {
         "general": 500,
