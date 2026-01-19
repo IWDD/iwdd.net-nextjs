@@ -29,7 +29,7 @@
     "@opennextjs/cloudflare": "1.14.9",
     "@playwright/test": "1.57.0",
     "@tailwindcss/postcss": "4.1.18",
-    "@types/node": "25.0.8",
+    "@types/node": "25.0.9",
     "@types/react": "19.2.8",
     "@types/react-dom": "19.2.3",
     "cssnano": "7.1.2",
