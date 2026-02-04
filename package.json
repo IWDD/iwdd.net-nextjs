@@ -43,7 +43,7 @@
     "prettier-plugin-tailwindcss": "0.7.2",
     "tailwindcss": "4.1.18",
     "typescript": "5.9.3",
-    "vitest": "4.0.17",
+    "vitest": "4.0.18",
     "wrangler": "4.59.3"
   },
   "pnpm": {
