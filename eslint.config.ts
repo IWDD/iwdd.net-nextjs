@@ -1,19 +1,26 @@
-import { fileURLToPath } from 'node:url'
-
-import { includeIgnoreFile } from '@eslint/compat'
 import { defineConfig, globalIgnores } from 'eslint/config'
 import nextVitals from 'eslint-config-next/core-web-vitals'
 import nextTs from 'eslint-config-next/typescript'
 import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended'
 import simpleImportSort from 'eslint-plugin-simple-import-sort'
 
-const gitignorePath = fileURLToPath(new URL('.gitignore', import.meta.url))
-
 const eslintConfig = defineConfig([
   ...nextVitals,
   ...nextTs,
-  includeIgnoreFile(gitignorePath),
-  globalIgnores(['worker-configuration.d.ts']),
+  globalIgnores([
+    '.next/**',
+    '.open-next/**',
+    '.wrangler/**',
+    '.serena/**',
+    '.firebase/**',
+    'out/**',
+    'build/**',
+    'coverage/**',
+    'node_modules/**',
+    'playwright-report/**',
+    'test-results/**',
+    'worker-configuration.d.ts',
+  ]),
   eslintPluginPrettierRecommended,
   {
     plugins: {
