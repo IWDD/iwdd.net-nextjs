@@ -433,7 +433,16 @@
         "student": 0
       },
       "hash_tags": ["iwdd"],
-      "topics": ["募集中"]
+      "topics": [
+        "Google Play Console",
+        "OpenClaw + moltbook",
+        "AI時代に捨てるスキルと残すスキル",
+        "jQuery 4",
+        "State of JS",
+        "開発環境現状確認",
+        "neovim + lazyvim + lazugit",
+        "Claude Code で dotfiles を管理する"
+      ]
     },
     {
       "vol": 228,
