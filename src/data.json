@@ -10,9 +10,7 @@
         "general": 500,
         "student": 0
       },
-      "hash_tags": [
-        "iwdd"
-      ],
+      "hash_tags": ["iwdd"],
       "topics": [
         "RAG 検索拡張生成",
         "Llama",
@@ -32,9 +30,7 @@
         "general": 500,
         "student": 0
       },
-      "hash_tags": [
-        "iwdd"
-      ],
+      "hash_tags": ["iwdd"],
       "topics": [
         "Cloudflare Registrar",
         "Cloudflare DNS",
@@ -54,12 +50,8 @@
         "general": 500,
         "student": 0
       },
-      "hash_tags": [
-        "iwdd"
-      ],
-      "topics": [
-        "募集中"
-      ],
+      "hash_tags": ["iwdd"],
+      "topics": ["募集中"],
       "cancelled": true
     },
     {
@@ -72,9 +64,7 @@
         "general": 500,
         "student": 0
       },
-      "hash_tags": [
-        "iwdd"
-      ],
+      "hash_tags": ["iwdd"],
       "topics": [
         "RAG (Retrieval-Augmented Generation)",
         "Passkey",
@@ -93,9 +83,7 @@
         "general": 500,
         "student": 0
       },
-      "hash_tags": [
-        "iwdd"
-      ],
+      "hash_tags": ["iwdd"],
       "topics": [
         "MailChannels",
         "OAuth",
@@ -122,12 +110,8 @@
         "general": 500,
         "student": 0
       },
-      "hash_tags": [
-        "iwdd"
-      ],
-      "topics": [
-        "募集中"
-      ]
+      "hash_tags": ["iwdd"],
+      "topics": ["募集中"]
     },
     {
       "vol": 214,
@@ -139,9 +123,7 @@
         "general": 500,
         "student": 0
       },
-      "hash_tags": [
-        "iwdd"
-      ],
+      "hash_tags": ["iwdd"],
       "topics": [
         "脱 WordPress 研究会",
         "Next.js",
@@ -160,9 +142,7 @@
         "general": 500,
         "student": 0
       },
-      "hash_tags": [
-        "iwdd"
-      ],
+      "hash_tags": ["iwdd"],
       "topics": [
         "AWS 認定",
         "AWS 黒本",
@@ -200,9 +180,7 @@
         "general": 500,
         "student": 0
       },
-      "hash_tags": [
-        "iwdd"
-      ],
+      "hash_tags": ["iwdd"],
       "topics": [
         "クレジットガイダンス",
         "Google OAuth認証の欠陥",
@@ -229,9 +207,7 @@
         "general": 500,
         "student": 0
       },
-      "hash_tags": [
-        "iwdd"
-      ],
+      "hash_tags": ["iwdd"],
       "topics": [
         "VNE事業者",
         "IPv4 over IPv6での固定IP",
@@ -253,9 +229,7 @@
         "general": 500,
         "student": 0
       },
-      "hash_tags": [
-        "iwdd"
-      ],
+      "hash_tags": ["iwdd"],
       "topics": [
         "Windows 10 EOL",
         "Office 365 ライセンスの違い",
@@ -279,9 +253,7 @@
         "general": 500,
         "student": 0
       },
-      "hash_tags": [
-        "iwdd"
-      ],
+      "hash_tags": ["iwdd"],
       "topics": [
         "AIを使った交通整理の看板",
         "ntfy.shでスマホへ通知",
@@ -299,9 +271,7 @@
         "general": 500,
         "student": 0
       },
-      "hash_tags": [
-        "iwdd"
-      ],
+      "hash_tags": ["iwdd"],
       "topics": [
         "町の公式情報はどこから得るか？",
         "行政区ごとの情報配信",
@@ -322,9 +292,7 @@
         "general": 500,
         "student": 0
       },
-      "hash_tags": [
-        "iwdd"
-      ],
+      "hash_tags": ["iwdd"],
       "topics": [
         "Claude Code CLI",
         "Gemini CLI",
@@ -347,9 +315,7 @@
         "general": 500,
         "student": 0
       },
-      "hash_tags": [
-        "iwdd"
-      ],
+      "hash_tags": ["iwdd"],
       "topics": [
         "登録セキスペ",
         "STARLINKスタンバイモード廃止",
@@ -374,9 +340,7 @@
         "general": 500,
         "student": 0
       },
-      "hash_tags": [
-        "iwdd"
-      ],
+      "hash_tags": ["iwdd"],
       "topics": [
         "FeliCa脆弱性関連",
         "AI導入によるチーム少人数化",
@@ -403,9 +367,7 @@
         "general": 500,
         "student": 0
       },
-      "hash_tags": [
-        "iwdd"
-      ],
+      "hash_tags": ["iwdd"],
       "topics": [
         "AIとSEO",
         "Affinity",
@@ -427,9 +389,7 @@
         "general": 500,
         "student": 0
       },
-      "hash_tags": [
-        "iwdd"
-      ],
+      "hash_tags": ["iwdd"],
       "topics": [
         "災害時の回線",
         "Invoke-WebRequestとTrident",
@@ -452,9 +412,7 @@
         "general": 500,
         "student": 0
       },
-      "hash_tags": [
-        "iwdd"
-      ],
+      "hash_tags": ["iwdd"],
       "topics": [
         "国際電話休止",
         "Hacklore",
@@ -474,11 +432,16 @@
         "general": 500,
         "student": 0
       },
-      "hash_tags": [
-        "iwdd"
-      ],
+      "hash_tags": ["iwdd"],
       "topics": [
-        "募集中"
+        "Google Play Console",
+        "OpenClaw + moltbook",
+        "AI時代に捨てるスキルと残すスキル",
+        "jQuery 4",
+        "State of JS",
+        "開発環境現状確認",
+        "neovim + lazyvim + lazugit",
+        "Claude Code で dotfiles を管理する"
       ]
     },
     {
@@ -491,12 +454,8 @@
         "general": 500,
         "student": 0
       },
-      "hash_tags": [
-        "iwdd"
-      ],
-      "topics": [
-        "募集中"
-      ]
+      "hash_tags": ["iwdd"],
+      "topics": ["募集中"]
     },
     {
       "vol": 229,
@@ -508,12 +467,8 @@
         "general": 500,
         "student": 0
       },
-      "hash_tags": [
-        "iwdd"
-      ],
-      "topics": [
-        "募集中"
-      ]
+      "hash_tags": ["iwdd"],
+      "topics": ["募集中"]
     },
     {
       "vol": 230,
@@ -525,12 +480,8 @@
         "general": 500,
         "student": 0
       },
-      "hash_tags": [
-        "iwdd"
-      ],
-      "topics": [
-        "募集中"
-      ]
+      "hash_tags": ["iwdd"],
+      "topics": ["募集中"]
     },
     {
       "vol": 231,
@@ -542,12 +493,8 @@
         "general": 500,
         "student": 0
       },
-      "hash_tags": [
-        "iwdd"
-      ],
-      "topics": [
-        "募集中"
-      ]
+      "hash_tags": ["iwdd"],
+      "topics": ["募集中"]
     },
     {
       "vol": 232,
@@ -559,12 +506,8 @@
         "general": 500,
         "student": 0
       },
-      "hash_tags": [
-        "iwdd"
-      ],
-      "topics": [
-        "募集中"
-      ]
+      "hash_tags": ["iwdd"],
+      "topics": ["募集中"]
     },
     {
       "vol": 233,
@@ -576,12 +519,8 @@
         "general": 500,
         "student": 0
       },
-      "hash_tags": [
-        "iwdd"
-      ],
-      "topics": [
-        "募集中"
-      ]
+      "hash_tags": ["iwdd"],
+      "topics": ["募集中"]
     },
     {
       "vol": 234,
@@ -593,12 +532,8 @@
         "general": 500,
         "student": 0
       },
-      "hash_tags": [
-        "iwdd"
-      ],
-      "topics": [
-        "募集中"
-      ]
+      "hash_tags": ["iwdd"],
+      "topics": ["募集中"]
     },
     {
       "vol": 235,
@@ -610,12 +545,8 @@
         "general": 500,
         "student": 0
       },
-      "hash_tags": [
-        "iwdd"
-      ],
-      "topics": [
-        "募集中"
-      ]
+      "hash_tags": ["iwdd"],
+      "topics": ["募集中"]
     },
     {
       "vol": 236,
@@ -627,12 +558,8 @@
         "general": 500,
         "student": 0
       },
-      "hash_tags": [
-        "iwdd"
-      ],
-      "topics": [
-        "募集中"
-      ]
+      "hash_tags": ["iwdd"],
+      "topics": ["募集中"]
     },
     {
       "vol": 237,
@@ -644,12 +571,8 @@
         "general": 500,
         "student": 0
       },
-      "hash_tags": [
-        "iwdd"
-      ],
-      "topics": [
-        "募集中"
-      ]
+      "hash_tags": ["iwdd"],
+      "topics": ["募集中"]
     },
     {
       "vol": 238,
@@ -661,12 +584,8 @@
         "general": 500,
         "student": 0
       },
-      "hash_tags": [
-        "iwdd"
-      ],
-      "topics": [
-        "募集中"
-      ]
+      "hash_tags": ["iwdd"],
+      "topics": ["募集中"]
     },
     {
       "vol": 239,
@@ -678,12 +597,8 @@
         "general": 500,
         "student": 0
       },
-      "hash_tags": [
-        "iwdd"
-      ],
-      "topics": [
-        "募集中"
-      ]
+      "hash_tags": ["iwdd"],
+      "topics": ["募集中"]
     },
     {
       "vol": 240,
@@ -695,12 +610,8 @@
         "general": 500,
         "student": 0
       },
-      "hash_tags": [
-        "iwdd"
-      ],
-      "topics": [
-        "募集中"
-      ]
+      "hash_tags": ["iwdd"],
+      "topics": ["募集中"]
     },
     {
       "vol": 241,
@@ -712,12 +623,8 @@
         "general": 500,
         "student": 0
       },
-      "hash_tags": [
-        "iwdd"
-      ],
-      "topics": [
-        "募集中"
-      ]
+      "hash_tags": ["iwdd"],
+      "topics": ["募集中"]
     },
     {
       "vol": 242,
@@ -729,12 +636,8 @@
         "general": 500,
         "student": 0
       },
-      "hash_tags": [
-        "iwdd"
-      ],
-      "topics": [
-        "募集中"
-      ]
+      "hash_tags": ["iwdd"],
+      "topics": ["募集中"]
     },
     {
       "vol": 243,
@@ -746,12 +649,8 @@
         "general": 500,
         "student": 0
       },
-      "hash_tags": [
-        "iwdd"
-      ],
-      "topics": [
-        "募集中"
-      ]
+      "hash_tags": ["iwdd"],
+      "topics": ["募集中"]
     },
     {
       "vol": 244,
@@ -763,12 +662,8 @@
         "general": 500,
         "student": 0
       },
-      "hash_tags": [
-        "iwdd"
-      ],
-      "topics": [
-        "募集中"
-      ]
+      "hash_tags": ["iwdd"],
+      "topics": ["募集中"]
     },
     {
       "vol": 245,
@@ -780,12 +675,8 @@
         "general": 500,
         "student": 0
       },
-      "hash_tags": [
-        "iwdd"
-      ],
-      "topics": [
-        "募集中"
-      ]
+      "hash_tags": ["iwdd"],
+      "topics": ["募集中"]
     },
     {
       "vol": 246,
@@ -797,12 +688,8 @@
         "general": 500,
         "student": 0
       },
-      "hash_tags": [
-        "iwdd"
-      ],
-      "topics": [
-        "募集中"
-      ]
+      "hash_tags": ["iwdd"],
+      "topics": ["募集中"]
     },
     {
       "vol": 247,
@@ -814,12 +701,8 @@
         "general": 500,
         "student": 0
       },
-      "hash_tags": [
-        "iwdd"
-      ],
-      "topics": [
-        "募集中"
-      ]
+      "hash_tags": ["iwdd"],
+      "topics": ["募集中"]
     },
     {
       "vol": 248,
@@ -831,12 +714,8 @@
         "general": 500,
         "student": 0
       },
-      "hash_tags": [
-        "iwdd"
-      ],
-      "topics": [
-        "募集中"
-      ]
+      "hash_tags": ["iwdd"],
+      "topics": ["募集中"]
     },
     {
       "vol": 249,
@@ -848,12 +727,8 @@
         "general": 500,
         "student": 0
       },
-      "hash_tags": [
-        "iwdd"
-      ],
-      "topics": [
-        "募集中"
-      ]
+      "hash_tags": ["iwdd"],
+      "topics": ["募集中"]
     }
   ]
 }
