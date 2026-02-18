@@ -28,7 +28,7 @@
   "devDependencies": {
     "@opennextjs/cloudflare": "1.16.5",
     "@playwright/test": "1.58.2",
-    "@tailwindcss/postcss": "4.1.18",
+    "@tailwindcss/postcss": "4.2.0",
     "@types/node": "25.2.3",
     "@types/react": "19.2.14",
     "@types/react-dom": "19.2.3",
@@ -41,7 +41,7 @@
     "eslint-plugin-simple-import-sort": "12.1.1",
     "prettier": "3.8.1",
     "prettier-plugin-tailwindcss": "0.7.2",
-    "tailwindcss": "4.1.18",
+    "tailwindcss": "4.2.0",
     "typescript": "5.9.3",
     "vitest": "4.0.18",
     "wrangler": "4.66.0"
