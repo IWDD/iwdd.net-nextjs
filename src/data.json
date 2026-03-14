@@ -456,15 +456,20 @@
       },
       "hash_tags": ["iwdd"],
       "topics": [
-        "iPhone機種変とMobileSuica",
-        "ロリポップ！固定IPアクセス",
+        "iPhone機種変とApple IDとMobile Suica",
+        "ロリポップ固定IPアクセス",
+        "ロリポップVPNとAWS Elastic IPのコスト比較",
+        "インターリンク固定IPのサービスごとの違い",
+        "ひかり電話あり(56)なし(64)のIPv6の違い",
+        "IPv6のVNEと仕様の違い",
         "IPv4 over IPv6のIPIPと固定IP",
-        "tmux-fzf",
-        "ad mute chrome extension",
+        "tmux-fzfみたいなの作った",
+        "Ad mute chrome extension",
         "vinext",
         "Penpot",
         "pencil.dev",
-        "claude code の /voice と pencil でWebサイトデザイン"
+        "PhotoshopのAIアシスタント",
+        "Claude Codeの音声入力とpencilでWebデザイン"
       ]
     },
     {
