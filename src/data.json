@@ -455,7 +455,17 @@
         "student": 0
       },
       "hash_tags": ["iwdd"],
-      "topics": ["募集中"]
+      "topics": [
+        "iPhone機種変とMobileSuica",
+        "ロリポップ！固定IPアクセス",
+        "IPv4 over IPv6のIPIPと固定IP",
+        "tmux-fzf",
+        "ad mute chrome extension",
+        "vinext",
+        "Penpot",
+        "pencil.dev",
+        "claude code の /voice と pencil でWebサイトデザイン"
+      ]
     },
     {
       "vol": 229,
