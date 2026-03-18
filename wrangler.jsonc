@@ -1,15 +1,10 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "iwdd-net-nextjs",
-  "main": "dist/worker.js",
   "compatibility_date": "2025-03-01",
   "compatibility_flags": [
     "nodejs_compat"
   ],
-  "assets": {
-    "binding": "ASSETS",
-    "directory": "dist/assets"
-  },
   "observability": {
     "enabled": true
   },
