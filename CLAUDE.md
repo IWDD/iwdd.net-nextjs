@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-IWDD公式サイト (iwdd.net) - Next.js 16 + React 19で構築されたCloudflare Pages向けの静的サイト。岩手県盛岡市で毎月開催されるWeb系勉強会コミュニティのウェブサイト。
+IWDD公式サイト (iwdd.net) - vinext (Vite + Next.js) + React 19で構築されたCloudflare Workers向けのサイト。岩手県盛岡市で毎月開催されるWeb系勉強会コミュニティのウェブサイト。
 
 ## Commands
 
@@ -43,7 +43,7 @@ src/data.json → lib/getNextEvent.ts → page.tsx
 
 ### Key Directories
 
-- `src/app/` - Next.js App Router (page.tsx, layout.tsx)
+- `src/app/` - App Router (page.tsx, layout.tsx)
 - `src/lib/` - ユーティリティ関数（日付フォーマット、イベント取得など）
 - `src/types/` - TypeScript型定義
 - `src/data.json` - 全イベントデータ（vol, topics, start_at, place等）
@@ -64,6 +64,6 @@ src/data.json → lib/getNextEvent.ts → page.tsx
 
 ## Deployment
 
-- Cloudflare Workers via OpenNext (`@opennextjs/cloudflare`)
+- Cloudflare Workers via vinext (`vinext deploy`)
 - Node.js 24 (mise.toml で管理)
 - pnpm (packageManager field で管理)
