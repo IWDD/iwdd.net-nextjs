@@ -9,7 +9,7 @@ const eslintConfig = defineConfig([
   ...nextTs,
   globalIgnores([
     '.next/**',
-    '.open-next/**',
+    'dist/**',
     '.wrangler/**',
     '.serena/**',
     '.firebase/**',
