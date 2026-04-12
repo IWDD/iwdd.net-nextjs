@@ -483,7 +483,13 @@
         "student": 0
       },
       "hash_tags": ["iwdd"],
-      "topics": ["募集中"]
+      "topics": [
+        "Claude Mythos",
+        "NDLOCR-Lite",
+        "Plone CMS",
+        "SuperPowers",
+        "DESIGN.md"
+      ]
     },
     {
       "vol": 230,
@@ -737,6 +743,19 @@
       "event_url": "https://iwdd.connpass.com/event/381205/",
       "start_at": "2028-01-08T05:00:00.000Z",
       "end_at": "2028-01-08T08:00:00.000Z",
+      "place": "アイーナ 816部屋",
+      "price": {
+        "general": 500,
+        "student": 0
+      },
+      "hash_tags": ["iwdd"],
+      "topics": ["募集中"]
+    },
+    {
+      "vol": 250,
+      "event_url": "https://iwdd.connpass.com/event/390646/",
+      "start_at": "2028-02-05T05:00:00.000Z",
+      "end_at": "2028-02-05T08:00:00.000Z",
       "place": "アイーナ 816部屋",
       "price": {
         "general": 500,
