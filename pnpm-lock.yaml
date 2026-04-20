@@ -76,8 +76,8 @@ importers:
         specifier: ^19.2.5
         version: 19.2.5(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(webpack@5.105.4(esbuild@0.28.0))
       tailwindcss:
-        specifier: 4.2.2
-        version: 4.2.2
+        specifier: 4.2.3
+        version: 4.2.3
       typescript:
         specifier: 5.9.3
         version: 5.9.3
@@ -3204,6 +3204,9 @@ packages:
 
   tailwindcss@4.2.2:
     resolution: {integrity: sha512-KWBIxs1Xb6NoLdMVqhbhgwZf2PGBpPEiwOqgI4pFIYbNTfBXiKYyWoTsXgBQ9WFg/OlhnvHaY+AEpW7wSmFo2Q==}
+
+  tailwindcss@4.2.3:
+    resolution: {integrity: sha512-fA/NX5gMf0ooCLISgB0wScaWgaj6rjTN2SVAwleURjiya7ITNkV+VMmoHtKkldP6CIZoYCZyxb8zP/e2TWoEtQ==}
 
   tapable@2.3.0:
     resolution: {integrity: sha512-g9ljZiwki/LfxmQADO3dEY1CbpmXT5Hm2fJ+QaGKwSXUylMybePR7/67YW7jOrrvjEgL1Fmz5kzyAjWVWLlucg==}
@@ -6675,6 +6678,8 @@ snapshots:
       '@pkgr/core': 0.2.9
 
   tailwindcss@4.2.2: {}
+
+  tailwindcss@4.2.3: {}
 
   tapable@2.3.0: {}
 
