@@ -42,7 +42,7 @@
     "eslint-plugin-simple-import-sort": "13.0.0",
     "next": "16.2.4",
     "prettier": "3.8.3",
-    "prettier-plugin-tailwindcss": "0.7.2",
+    "prettier-plugin-tailwindcss": "0.7.3",
     "react-server-dom-webpack": "^19.2.5",
     "tailwindcss": "4.2.4",
     "typescript": "5.9.3",
