@@ -5,7 +5,7 @@
   "engines": {
     "node": "24"
   },
-  "packageManager": "pnpm@10.25.0",
+  "packageManager": "pnpm@10.33.2",
   "private": true,
   "scripts": {
     "dev": "vinext dev",
