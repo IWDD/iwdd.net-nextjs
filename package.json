@@ -33,7 +33,7 @@
     "@types/react-dom": "19.2.3",
     "@vitejs/plugin-react": "^6.0.1",
     "@vitejs/plugin-rsc": "^0.5.24",
-    "cssnano": "7.1.5",
+    "cssnano": "7.1.7",
     "esbuild": "0.28.0",
     "eslint": "9.39.2",
     "eslint-config-next": "16.2.4",
