@@ -48,7 +48,7 @@
     "typescript": "5.9.3",
     "vinext": "^0.0.38",
     "vite": "^8.0.10",
-    "vitest": "4.1.5",
+    "vitest": "4.1.6",
     "wrangler": "4.90.0"
   },
   "pnpm": {
