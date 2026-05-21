@@ -1,0 +1,20 @@
+# Supply-chain security (pnpm v11+, 単位: 分)
+# 1440 = 24h は v11 のデフォルト。明示することで v12 以降のデフォルト変更に対する固定化を意図。
+# Renovate 側で minimumReleaseAge: '2 days' を設定しているため、
+# Renovate 経由の更新は確実にこの cutoff を超える。
+minimumReleaseAge: 1440
+
+# Build script policy (pnpm v11+)
+# v10 の onlyBuiltDependencies は v11 で削除され、allowBuilds map に統合された。
+# strictDepBuilds: true (v11 デフォルト) のため、明示されていない build script は install を fail させる。
+#
+# 方針: pnpm 10 時代はそもそも postinstall script はデフォルトでブロックされていた
+# (本リポジトリでは onlyBuiltDependencies が未設定だった = 全 build script がブロック済み)。
+# pnpm 11 で同じ挙動を維持するため、ここに列挙したパッケージは false (= 明示的に build skip)
+# として strictDepBuilds の install fail を回避する。
+# 個別に build を実行する必要が出たら true に切り替える。
+allowBuilds:
+  esbuild: false
+  sharp: false
+  unrs-resolver: false
+  workerd: false
