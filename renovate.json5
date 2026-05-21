@@ -17,16 +17,4 @@
     enabled: true,
     schedule: ['before 5am on monday'],
   },
-  packageRules: [
-    {
-      matchManagers: ['npm'],
-      matchUpdateTypes: ['minor', 'patch'],
-      groupName: 'npm (minor & patch)',
-    },
-    {
-      matchManagers: ['github-actions'],
-      matchUpdateTypes: ['minor', 'patch'],
-      groupName: 'github-actions (minor & patch)',
-    },
-  ],
 }
