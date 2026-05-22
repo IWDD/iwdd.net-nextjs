@@ -53,3 +53,6 @@ yarn-error.log*
 # typescript
 /tsconfig.tsbuildinfo
 /dist/
+
+# vinext
+.vinext/
