@@ -1,8 +1,9 @@
 # Supply-chain security (pnpm v11+, 単位: 分)
-# 1440 = 24h は v11 のデフォルト。明示することで v12 以降のデフォルト変更に対する固定化を意図。
-# Renovate 側で minimumReleaseAge: '2 days' を設定しているため、
-# Renovate 経由の更新は確実にこの cutoff を超える。
-minimumReleaseAge: 1440
+# 2880 = 48h。pnpm v11 デフォルト (1440/24h) より厳しくした独自値で、
+# 手動 pnpm add や lockFileMaintenance / pin 経由で入る間接依存にも 48h の猶予を与える。
+# Renovate 側でも config:best-practices の security:minimumReleaseAgeNpm により
+# npm パッケージは公開 3 日待ちとなり、pnpm floor (2日) <= Renovate gate (3日) を維持する。
+minimumReleaseAge: 2880
 
 # Build script policy (pnpm v11+)
 # v10 の onlyBuiltDependencies は v11 で削除され、allowBuilds map に統合された。

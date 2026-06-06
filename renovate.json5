@@ -1,21 +1,30 @@
 {
   $schema: 'https://docs.renovatebot.com/renovate-schema.json',
   extends: [
-    'config:recommended',
-    'helpers:pinGitHubActionDigests',
-    ':dependencyDashboard',
+    // 公式ベストプラクティス集。recommended + configMigration / pinDevDependencies /
+    // docker:pinDigests / pinGitHubActionDigests / security:minimumReleaseAgeNpm 等を内包。
+    'config:best-practices',
+    // 依存更新の commit を semantic (fix(deps) / chore(deps)) に強制する。
     ':semanticCommits',
+    // schedule などの時刻基準を Asia/Tokyo にする。
     ':timezone(Asia/Tokyo)',
   ],
-  schedule: ['before 6am'],
+  // 更新 PR を作成する時間帯。cron 5 フィールド(分は必ず `*`)。月・木の終日。
+  schedule: ['* * * * 1,4'],
+  // 同時にオープンする PR の上限。
   prConcurrentLimit: 20,
+  // 時間あたり PR 作成数の上限を撤廃し、ウィンドウ内で一気に作成する。
+  prHourlyLimit: 0,
+  // 全 PR に付与するラベル。
   labels: ['dependencies'],
-  // pnpm v11 の minimumReleaseAge (default 24h = 1440 分) を確実に上回るため
-  // Renovate 側で公開から 2 日経過したパッケージのみ PR 化する。
-  // (PR 作成時点で pnpm install が確実に通るようにするためのバッファ)
-  minimumReleaseAge: '2 days',
+  // OSV データベースで脆弱性を検出する。
+  osvVulnerabilityAlerts: true,
+  // 未解決の脆弱性をダッシュボードにサマリ表示する。
+  dependencyDashboardOSVVulnerabilitySummary: 'unresolved',
+  // 直接依存の更新がなくても lockfile 全体を定期リフレッシュし間接依存を更新する。
   lockFileMaintenance: {
     enabled: true,
-    schedule: ['before 5am on monday'],
+    // 実行する時間帯。月曜の終日。
+    schedule: ['* * * * 1'],
   },
 }
