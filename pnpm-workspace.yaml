@@ -19,3 +19,6 @@ allowBuilds:
   sharp: false
   unrs-resolver: false
   workerd: false
+minimumReleaseAgeExclude:
+  # Renovate security update: esbuild@0.28.1
+  - esbuild@0.28.1
