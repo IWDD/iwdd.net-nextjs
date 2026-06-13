@@ -502,7 +502,7 @@
         "student": 0
       },
       "hash_tags": ["iwdd"],
-      "topics": ["募集中"]
+      "topics": ["ダークパターン"]
     },
     {
       "vol": 231,
@@ -515,7 +515,17 @@
         "student": 0
       },
       "hash_tags": ["iwdd"],
-      "topics": ["募集中"]
+      "topics": [
+        "クマとのDMZ",
+        "OpenAIのサポートに問い合わせした",
+        "DMARC, BIMI, Verified Mark Certificates（VMC）",
+        "Fable 5 の自走力",
+        "Fable 5 が止められた",
+        "When AI builds itself",
+        "AI時代にプログラミングを学ぶ意味",
+        "ジュニアをどう育てるか",
+        "FDE (Forward Deployed Engineer)"
+      ]
     },
     {
       "vol": 232,
