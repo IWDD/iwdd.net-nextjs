@@ -22,3 +22,5 @@ allowBuilds:
 minimumReleaseAgeExclude:
   # Renovate security update: esbuild@0.28.1
   - esbuild@0.28.1
+  # Renovate security update: pnpm@11.8.0
+  - pnpm@11.8.0
