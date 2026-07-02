@@ -46,7 +46,7 @@
     "react-server-dom-webpack": "19.2.7",
     "tailwindcss": "4.3.0",
     "typescript": "6.0.3",
-    "vinext": "0.1.2",
+    "vinext": "0.1.8",
     "vite": "8.0.16",
     "vitest": "4.1.8",
     "wrangler": "4.105.0"
