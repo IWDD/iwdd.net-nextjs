@@ -9,8 +9,11 @@
     // schedule などの時刻基準を Asia/Tokyo にする。
     ':timezone(Asia/Tokyo)',
   ],
-  // 更新 PR を作成する時間帯。cron 5 フィールド(分は必ず `*`)。月・木の終日。
-  schedule: ['* * * * 1,4'],
+  // 更新 PR を作成する時間帯。cron 5 フィールド(分は必ず `*`)。月曜の終日。
+  // CI 実行回数を抑えるため週 1 (旧: 月・木の週 2)。全リポジトリで揃えてある。
+  // Renovate 本体は suzuryo/renovate のランナーが毎日起動するので、
+  // 更新頻度を決めているのはこの schedule だけ。
+  schedule: ['* * * * 1'],
   // 同時にオープンする PR の上限。
   prConcurrentLimit: 20,
   // 時間あたり PR 作成数の上限を撤廃し、ウィンドウ内で一気に作成する。
