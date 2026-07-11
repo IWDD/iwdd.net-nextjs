@@ -487,7 +487,7 @@
         "Claude Mythos",
         "NDLOCR-Lite",
         "Plone CMS",
-        "SuperPowers",
+        "Superpowers",
         "DESIGN.md"
       ]
     },
@@ -538,20 +538,14 @@
         "student": 0
       },
       "hash_tags": ["iwdd"],
-      "topics": ["募集中"]
-    },
-    {
-      "vol": 233,
-      "event_url": "https://iwdd.connpass.com/event/358923/",
-      "start_at": "2026-08-08T05:00:00.000Z",
-      "end_at": "2026-08-08T08:00:00.000Z",
-      "place": "アイーナ 816部屋",
-      "price": {
-        "general": 500,
-        "student": 0
-      },
-      "hash_tags": ["iwdd"],
-      "topics": ["募集中"]
+      "topics": [
+        "GPT-Live",
+        "AGENTS.mdの作成とメンテナンス",
+        "Agent Skills",
+        "LINE Seed",
+        "=GOOGLETRANSLATE(A2,B2,C2)",
+        "Claudeで翻訳"
+      ]
     },
     {
       "vol": 234,
@@ -766,6 +760,71 @@
       "event_url": "https://iwdd.connpass.com/event/390646/",
       "start_at": "2028-02-05T05:00:00.000Z",
       "end_at": "2028-02-05T08:00:00.000Z",
+      "place": "アイーナ 816部屋",
+      "price": {
+        "general": 500,
+        "student": 0
+      },
+      "hash_tags": ["iwdd"],
+      "topics": ["募集中"]
+    },
+    {
+      "vol": 251,
+      "event_url": "https://iwdd.connpass.com/event/400303/",
+      "start_at": "2028-03-11T05:00:00.000Z",
+      "end_at": "2028-03-11T08:00:00.000Z",
+      "place": "アイーナ 816部屋",
+      "price": {
+        "general": 500,
+        "student": 0
+      },
+      "hash_tags": ["iwdd"],
+      "topics": ["募集中"]
+    },
+    {
+      "vol": 252,
+      "event_url": "https://iwdd.connpass.com/event/400304/",
+      "start_at": "2028-04-08T05:00:00.000Z",
+      "end_at": "2028-04-08T08:00:00.000Z",
+      "place": "アイーナ 816部屋",
+      "price": {
+        "general": 500,
+        "student": 0
+      },
+      "hash_tags": ["iwdd"],
+      "topics": ["募集中"]
+    },
+    {
+      "vol": 253,
+      "event_url": "https://iwdd.connpass.com/event/400305/",
+      "start_at": "2028-05-13T05:00:00.000Z",
+      "end_at": "2028-05-13T08:00:00.000Z",
+      "place": "アイーナ 816部屋",
+      "price": {
+        "general": 500,
+        "student": 0
+      },
+      "hash_tags": ["iwdd"],
+      "topics": ["募集中"]
+    },
+    {
+      "vol": 254,
+      "event_url": "https://iwdd.connpass.com/event/400306/",
+      "start_at": "2028-06-10T05:00:00.000Z",
+      "end_at": "2028-06-10T08:00:00.000Z",
+      "place": "アイーナ 816部屋",
+      "price": {
+        "general": 500,
+        "student": 0
+      },
+      "hash_tags": ["iwdd"],
+      "topics": ["募集中"]
+    },
+    {
+      "vol": 255,
+      "event_url": "https://iwdd.connpass.com/event/400336/",
+      "start_at": "2028-07-08T05:00:00.000Z",
+      "end_at": "2028-07-08T08:00:00.000Z",
       "place": "アイーナ 816部屋",
       "price": {
         "general": 500,
