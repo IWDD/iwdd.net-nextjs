@@ -24,10 +24,32 @@
   osvVulnerabilityAlerts: true,
   // 未解決の脆弱性をダッシュボードにサマリ表示する。
   dependencyDashboardOSVVulnerabilitySummary: 'unresolved',
+  // 脆弱性由来の更新はグループ化・スケジュールを無視して即時・個別 PR にする。
+  // (下の packageRules でまとめてしまい security fix が月曜まで遅延するのを防ぐ)
+  vulnerabilityAlerts: {
+    groupName: null,
+    schedule: [],
+  },
   // 直接依存の更新がなくても lockfile 全体を定期リフレッシュし間接依存を更新する。
   lockFileMaintenance: {
     enabled: true,
     // 実行する時間帯。月曜の終日。
     schedule: ['* * * * 1'],
   },
+  // 非メジャーの npm 更新を利用目的ごとにまとめ、PR 件数と CI 実行回数を抑える。
+  // major 更新は破壊的変更を隔離してレビューできるよう、既存ルールのまま扱う。
+  packageRules: [
+    {
+      matchManagers: ['npm'],
+      matchDepTypes: ['dependencies'],
+      matchUpdateTypes: ['minor', 'patch', 'pin', 'pinDigest', 'digest'],
+      groupName: 'npm production',
+    },
+    {
+      matchManagers: ['npm'],
+      matchDepTypes: ['devDependencies'],
+      matchUpdateTypes: ['minor', 'patch', 'pin', 'pinDigest', 'digest'],
+      groupName: 'npm development',
+    },
+  ],
 }
