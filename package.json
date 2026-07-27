@@ -43,7 +43,7 @@
     "next": "16.2.11",
     "prettier": "3.9.6",
     "prettier-plugin-tailwindcss": "0.8.1",
-    "react-server-dom-webpack": "19.2.7",
+    "react-server-dom-webpack": "19.2.8",
     "tailwindcss": "4.3.3",
     "typescript": "6.0.3",
     "vinext": "0.2.1",
