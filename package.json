@@ -31,7 +31,7 @@
     "@types/node": "25.9.5",
     "@types/react": "19.2.17",
     "@types/react-dom": "19.2.3",
-    "@vitejs/plugin-react": "6.0.3",
+    "@vitejs/plugin-react": "6.0.4",
     "@vitejs/plugin-rsc": "0.5.28",
     "cssnano": "8.0.2",
     "esbuild": "0.28.1",
