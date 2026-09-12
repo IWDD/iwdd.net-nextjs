@@ -558,7 +558,19 @@
         "student": 0
       },
       "hash_tags": ["iwdd"],
-      "topics": ["募集中"]
+      "topics": [
+        "Gemini Notebook",
+        "Model Poisoning",
+        "さくらインターネット流出",
+        "wp2shell",
+        "wp core verify-checksums",
+        "modern-web-guidance",
+        "宮本佳林",
+        "Gemini Spark",
+        "roadmap.sh",
+        "Claude Desktop",
+        "コードで冪等な画像生成"
+      ]
     },
     {
       "vol": 235,
