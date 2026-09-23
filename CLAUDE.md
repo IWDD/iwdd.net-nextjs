@@ -1,5 +1,9 @@
 # CLAUDE.md
 
+This file provides guidance to Claude Code (claude.ai/code) and other coding agents
+when working with code in this repository. `AGENTS.md` is a symlink to this file,
+so every agent reads the same content — edit only `CLAUDE.md`.
+
 ## Project Overview
 
 IWDD公式サイト (iwdd.net) - vinext (Vite + Next.js) + React 19で構築されたCloudflare Workers向けのサイト。岩手県盛岡市で毎月開催されるWeb系勉強会コミュニティのウェブサイト。
@@ -7,36 +11,17 @@ IWDD公式サイト (iwdd.net) - vinext (Vite + Next.js) + React 19で構築さ�
 ## Commands
 
 ```bash
-# 開発サーバー起動
-pnpm dev
-
-# Lint (ESLint + Prettier)
-pnpm lint
-
-# テスト (Vitest)
-pnpm test
-
-# E2Eテスト (Playwright)
-pnpm test:e2e
-
-# E2Eテスト (Playwright UIモード)
-pnpm test:e2e:ui
-
-# ビルド
-pnpm build
-
-# ビルド済み成果物を起動
-pnpm start
-
-# ローカルプレビュー (vinext build && vinext start)
-pnpm preview
-
-# Cloudflare Workersデプロイ
-pnpm deploy
-
-# Cloudflare環境型を生成 (wrangler.jsonc変更後に実行 → cloudflare-env.d.ts)
-pnpm cf-typegen
+pnpm dev             # 開発サーバー起動
+pnpm lint            # ESLint（Prettier を含む）
+pnpm test            # Vitest
+pnpm test:e2e        # Playwright（UI モードは test:e2e:ui）
+pnpm build           # vinext build
+pnpm run deploy      # Cloudflare Workers へデプロイ（vinext deploy）
 ```
+
+`pnpm deploy` は pnpm 組み込みの workspace 用コマンドで、package.json の `deploy` スクリプトは
+動かない。デプロイは `pnpm run deploy`。その他（`start` / `preview` / `cf-typegen`）は
+`package.json` の scripts を参照。
 
 ## Architecture
 
@@ -84,11 +69,8 @@ src/data.json
 - `getNextEvent` は `cancelled` でなく開始日時が未来のイベントのみ返す。該当なしの場合は `getHomeParams` が「未定」プレースホルダーを返す。
 - `getTopics` はお題一覧から `'募集中'` を除外し、重複も排除する。
 - `getTopics` の `shuffle` は `Math.random()` を使うため出力が非決定的。テストは順序に依存しない検証にする。
-- `wrangler.jsonc`（Cloudflareバインディング）を変更したら
-  `pnpm cf-typegen` で `cloudflare-env.d.ts` を再生成する。
 
 ## Deployment
 
 - Cloudflare Workers via vinext (`vinext deploy`)
-- Node.js 24 (mise.toml で管理)
-- pnpm (packageManager field で管理)
+- Node.js と pnpm のバージョンは `mise.toml` と `package.json` の `packageManager` で固定
