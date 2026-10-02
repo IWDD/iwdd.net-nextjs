@@ -19,7 +19,7 @@ const eslintConfig = defineConfig([
     'node_modules/**',
     'playwright-report/**',
     'test-results/**',
-    'worker-configuration.d.ts',
+    '.cloudflare/**',
   ]),
   eslintPluginPrettierRecommended,
   {

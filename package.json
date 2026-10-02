@@ -8,16 +8,16 @@
   "packageManager": "pnpm@12.8.1",
   "private": true,
   "scripts": {
-    "dev": "vinext dev",
-    "build": "vinext build",
-    "start": "vinext start",
+    "dev": "vite dev",
+    "build": "vite build",
+    "start": "vite preview",
     "lint": "eslint",
     "test": "vitest run",
     "test:e2e": "playwright test",
     "test:e2e:ui": "playwright test --ui",
-    "deploy": "vinext deploy",
-    "preview": "vinext build && vinext start",
-    "cf-typegen": "wrangler types --env-interface CloudflareEnv cloudflare-env.d.ts"
+    "deploy": "vinext-cloudflare deploy",
+    "preview": "vite build && vite preview",
+    "cf-typegen": "cf workers types"
   },
   "dependencies": {
     "dayjs": "1.11.23",
@@ -25,14 +25,16 @@
     "react-dom": "19.3.0"
   },
   "devDependencies": {
-    "@cloudflare/vite-plugin": "1.62.0",
+    "@cloudflare/vite-plugin": "2.0.0-beta.sha-ad79608dd",
     "@playwright/test": "1.63.0",
     "@tailwindcss/vite": "4.3.3",
     "@types/node": "25.9.8",
     "@types/react": "19.3.0",
     "@types/react-dom": "19.3.0",
+    "@vinext/cloudflare": "1.0.0",
     "@vitejs/plugin-react": "6.1.1",
     "@vitejs/plugin-rsc": "0.5.35",
+    "cf": "1.0.0-beta.5",
     "cssnano": "9.1.1",
     "esbuild": "0.28.2",
     "eslint": "9.39.5",
@@ -46,9 +48,8 @@
     "react-server-dom-webpack": "19.3.0",
     "tailwindcss": "4.3.3",
     "typescript": "6.0.3",
-    "vinext": "0.2.1",
+    "vinext": "1.0.0",
     "vite": "8.3.1",
-    "vitest": "5.0.2",
-    "wrangler": "4.143.0"
+    "vitest": "5.0.2"
   }
 }

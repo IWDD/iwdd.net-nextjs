@@ -44,6 +44,9 @@ yarn-error.log*
 /.wrangler
 /.dev.vars
 
+# cloudflare (cf の Build Output と生成された型)
+/.cloudflare/
+
 # serena
 /.serena
 
