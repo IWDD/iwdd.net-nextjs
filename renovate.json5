@@ -51,5 +51,18 @@
       matchUpdateTypes: ['minor', 'patch', 'pin', 'pinDigest', 'digest'],
       groupName: 'npm development',
     },
+    // @cloudflare/vite-plugin の v2 は 2.0.0-beta.sha-<commit> 形式のベータで、
+    // semver の順序が公開順と一致しない。上流 (vinext init) と同じく beta タグを追う。
+    // v2 が正式版になったらこのルールを外す。
+    {
+      matchPackageNames: ['@cloudflare/vite-plugin'],
+      followTag: 'beta',
+    },
+    // cf と @cloudflare/vite-plugin v2 はベータ同士で依存 (@cloudflare/config, miniflare) を
+    // 揃える必要があるので、ほかの devDependencies と分けて 1 つの PR にする。
+    {
+      matchPackageNames: ['cf', '@cloudflare/vite-plugin'],
+      groupName: 'cloudflare cli beta',
+    },
   ],
 }
