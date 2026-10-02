@@ -11,16 +11,17 @@ IWDD公式サイト (iwdd.net) - vinext (Vite + Next.js) + React 19で構築さ�
 ## Commands
 
 ```bash
-pnpm dev             # 開発サーバー起動
+pnpm dev             # 開発サーバー起動（vite dev、http://localhost:5173）
 pnpm lint            # ESLint（Prettier を含む）
 pnpm test            # Vitest
-pnpm test:e2e        # Playwright（UI モードは test:e2e:ui）
-pnpm build           # vinext build
-pnpm run deploy      # Cloudflare Workers へデプロイ（vinext deploy）
+pnpm test:e2e        # Playwright（pnpm preview を起動して叩く。UI モードは test:e2e:ui）
+pnpm build           # vite build（Build Output は .cloudflare/output/v0）
+pnpm preview         # build してから workerd で起動（vite preview、http://localhost:4173）
+pnpm run deploy      # Cloudflare Workers へデプロイ（vinext-cloudflare deploy）
 ```
 
 `pnpm deploy` は pnpm 組み込みの workspace 用コマンドで、package.json の `deploy` スクリプトは
-動かない。デプロイは `pnpm run deploy`。その他（`start` / `preview` / `cf-typegen`）は
+動かない。デプロイは `pnpm run deploy`。その他（`start` / `cf-typegen`）は
 `package.json` の scripts を参照。
 
 ## Architecture
@@ -69,8 +70,20 @@ src/data.json
 - `getNextEvent` は `cancelled` でなく開始日時が未来のイベントのみ返す。該当なしの場合は `getHomeParams` が「未定」プレースホルダーを返す。
 - `getTopics` はお題一覧から `'募集中'` を除外し、重複も排除する。
 - `getTopics` の `shuffle` は `Math.random()` を使うため出力が非決定的。テストは順序に依存しない検証にする。
+- ビルドした Worker は `vinext start`（Node の本番サーバー）では動かない。vinext の Worker 出力が
+  `cloudflare:workers` を import するため。ローカルでの確認は `pnpm preview`（`vite preview`）を使う。
+- Cloudflare の型（`Env` とランタイム型）は dev / build のたびに `.cloudflare/types` へ生成される
+  （gitignore 済み）。ビルド前に単体で型チェックするなら先に `pnpm cf-typegen` を実行する。
+- `cf` と `@cloudflare/vite-plugin` v2 はベータ。vite-plugin v2 の版は
+  `2.0.0-beta.sha-<commit>` 形式で semver の順序が公開順と一致しないので、
+  Renovate は beta タグを追う（`renovate.json5`）。
+  `pnpm-workspace.yaml` の `minimumReleaseAge` により、公開から 48 時間未満のベータは入らない。
 
 ## Deployment
 
-- Cloudflare Workers via vinext (`vinext deploy`)
+- Cloudflare Workers。vinext の既定構成（cf）で、Worker の設定は `cloudflare.config.ts`
+  （`cf/config`）に書く。wrangler.jsonc と wrangler は使わない
+- `pnpm run deploy`（`vinext-cloudflare deploy`）は `vite build` のあと
+  `cf deploy --prebuilt` を実行する。手元から実行するときは `pnpm exec cf auth login`、
+  CI では `CLOUDFLARE_API_TOKEN` と `CLOUDFLARE_ACCOUNT_ID` を渡す
 - Node.js と pnpm のバージョンは `mise.toml` と `package.json` の `packageManager` で固定

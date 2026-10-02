@@ -23,7 +23,7 @@
 
 ## 開発サイクル
 
-1. 開発サーバーの起動
+1. 開発サーバーの起動（<http://localhost:5173>）
 
    ```shell
    pnpm dev
@@ -41,7 +41,7 @@
    pnpm build
    ```
 
-4. CloudFlare Pages のプレビュー
+4. Cloudflare Workers のプレビュー（ビルドして <http://localhost:4173> で起動）
 
    ```shell
    pnpm preview
