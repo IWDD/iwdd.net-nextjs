@@ -34,7 +34,7 @@
     "@vinext/cloudflare": "1.1.0",
     "@vitejs/plugin-react": "6.1.2",
     "@vitejs/plugin-rsc": "0.5.36",
-    "cf": "1.0.0-beta.14",
+    "cf": "1.0.0-beta.16",
     "cssnano": "9.5.0",
     "esbuild": "0.28.2",
     "eslint": "10.12.0",
