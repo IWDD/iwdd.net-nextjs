@@ -61,4 +61,4 @@ yarn-error.log*
 .vinext/
 
 # worktrees
-.worktrees/
+/.worktrees/
