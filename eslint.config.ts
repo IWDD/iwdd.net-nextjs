@@ -8,6 +8,7 @@ const eslintConfig = defineConfig([
   ...nextVitals,
   ...nextTs,
   globalIgnores([
+    '.worktrees/**',
     '.next/**',
     'dist/**',
     '.wrangler/**',
