@@ -85,4 +85,7 @@ src/data.json
 - `pnpm run deploy`（`vinext-cloudflare deploy`）は `vite build` のあと
   `cf deploy --prebuilt` を実行する。手元から実行するときは `pnpm exec cf auth login`、
   CI では `CLOUDFLARE_API_TOKEN` と `CLOUDFLARE_ACCOUNT_ID` を渡す
-- Node.js と pnpm のバージョンは `mise.toml` と `package.json` の `packageManager` で固定
+- Node.js のバージョンは `.node-version`（CI と Workers Builds）と `mise.toml`（ローカル）で固定。
+  Workers Builds は `mise.toml` と `engines` を読まないので、`.node-version` がないと
+  ビルドイメージの既定の版で動く
+- pnpm のバージョンは `mise.toml` と `package.json` の `packageManager` で固定
