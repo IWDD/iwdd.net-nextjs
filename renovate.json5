@@ -1,68 +1,46 @@
 {
-  $schema: 'https://docs.renovatebot.com/renovate-schema.json',
+  $schema: "https://docs.renovatebot.com/renovate-schema.json",
   extends: [
-    // 公式ベストプラクティス集。recommended + configMigration / pinDevDependencies /
-    // docker:pinDigests / pinGitHubActionDigests / security:minimumReleaseAgeNpm 等を内包。
-    'config:best-practices',
-    // 依存更新の commit を semantic (fix(deps) / chore(deps)) に強制する。
-    ':semanticCommits',
-    // schedule などの時刻基準を Asia/Tokyo にする。
-    ':timezone(Asia/Tokyo)',
+    "config:best-practices",
+    ":semanticCommits",
+    ":timezone(Asia/Tokyo)",
   ],
-  // 更新 PR を作成する時間帯。cron 5 フィールド(分は必ず `*`)。月曜の終日。
-  // CI 実行回数を抑えるため週 1 (旧: 月・木の週 2)。全リポジトリで揃えてある。
-  // Renovate 本体は suzuryo/renovate のランナーが毎日起動するので、
-  // 更新頻度を決めているのはこの schedule だけ。
-  schedule: ['* * * * 1'],
-  // 同時にオープンする PR の上限。
+  schedule: ["* * * * 1"],
   prConcurrentLimit: 20,
-  // 時間あたり PR 作成数の上限を撤廃し、ウィンドウ内で一気に作成する。
   prHourlyLimit: 0,
-  // 全 PR に付与するラベル。
-  labels: ['dependencies'],
-  // OSV データベースで脆弱性を検出する。
+  labels: ["dependencies"],
   osvVulnerabilityAlerts: true,
-  // 未解決の脆弱性をダッシュボードにサマリ表示する。
-  dependencyDashboardOSVVulnerabilitySummary: 'unresolved',
-  // 脆弱性由来の更新はグループ化・スケジュールを無視して即時・個別 PR にする。
-  // (下の packageRules でまとめてしまい security fix が月曜まで遅延するのを防ぐ)
+  dependencyDashboard: {
+    osvVulnerabilitySummary: "unresolved",
+  },
   vulnerabilityAlerts: {
     groupName: null,
     schedule: [],
   },
-  // 直接依存の更新がなくても lockfile 全体を定期リフレッシュし間接依存を更新する。
   lockFileMaintenance: {
     enabled: true,
-    // 実行する時間帯。月曜の終日。
-    schedule: ['* * * * 1'],
+    schedule: ["* * * * 1"],
   },
-  // 非メジャーの npm 更新を利用目的ごとにまとめ、PR 件数と CI 実行回数を抑える。
-  // major 更新は破壊的変更を隔離してレビューできるよう、既存ルールのまま扱う。
   packageRules: [
     {
-      matchManagers: ['npm'],
-      matchDepTypes: ['dependencies'],
-      matchUpdateTypes: ['minor', 'patch', 'pin', 'pinDigest', 'digest'],
-      groupName: 'npm production',
+      matchManagers: ["npm"],
+      matchDepTypes: ["dependencies"],
+      matchUpdateTypes: ["minor", "patch", "pin", "pinDigest", "digest"],
+      groupName: "npm production",
     },
     {
-      matchManagers: ['npm'],
-      matchDepTypes: ['devDependencies'],
-      matchUpdateTypes: ['minor', 'patch', 'pin', 'pinDigest', 'digest'],
-      groupName: 'npm development',
+      matchManagers: ["npm"],
+      matchDepTypes: ["devDependencies"],
+      matchUpdateTypes: ["minor", "patch", "pin", "pinDigest", "digest"],
+      groupName: "npm development",
     },
-    // @cloudflare/vite-plugin の v2 は 2.0.0-beta.sha-<commit> 形式のベータで、
-    // semver の順序が公開順と一致しない。上流 (vinext init) と同じく beta タグを追う。
-    // v2 が正式版になったらこのルールを外す。
     {
-      matchPackageNames: ['@cloudflare/vite-plugin'],
-      followTag: 'beta',
+      matchPackageNames: ["@cloudflare/vite-plugin"],
+      followTag: "beta",
     },
-    // cf と @cloudflare/vite-plugin v2 はベータ同士で依存 (@cloudflare/config, miniflare) を
-    // 揃える必要があるので、ほかの devDependencies と分けて 1 つの PR にする。
     {
-      matchPackageNames: ['cf', '@cloudflare/vite-plugin'],
-      groupName: 'cloudflare cli beta',
+      matchPackageNames: ["cf", "@cloudflare/vite-plugin"],
+      groupName: "cloudflare cli beta",
     },
   ],
 }
